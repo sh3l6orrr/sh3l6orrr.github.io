@@ -1,11 +1,6 @@
-.font {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif
-}
-.padding {
-    padding: 40px
-}
-.fancy {
+p {
     font-family: fantasy;
-    padding-left: 70px;
-    padding-top: 40px
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
 }
