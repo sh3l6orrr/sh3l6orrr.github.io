@@ -4,3 +4,12 @@ p {
     padding-right: 10%;
     padding-top: 5%;
 }
+
+body {
+
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: 100% 100%;
+    
+}
