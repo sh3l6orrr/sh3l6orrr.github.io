@@ -1,15 +1,12 @@
-p {
+.text {
     font-family: fantasy;
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 5%;
 }
 
-body {
-
-    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
-    background-repeat: no-repeat;
-    background-position: 0% 0%;
-    background-size: 100% 100%;
-    
+.title {
+    font-family: Arial;
+    padding-left: 10%;
+    padding-right: 10%;
 }
