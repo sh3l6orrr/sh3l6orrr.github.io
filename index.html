@@ -17,27 +17,34 @@
     <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
 
     <!-- Using KaTeX -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+        integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
 
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"
+        integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"
+        crossorigin="anonymous"></script>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+        integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
-    
+    <!-- Use Vue.js -->
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 
 <body>
+
     <div class="container">
         <div class="row">
             <div class="col">
 
             </div>
             <div class="col-8">
-            <!-- <div class="col-12"> -->
+                <!-- <div class="col-12"> -->
                 <nav class="mt-4 mb-3">
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
-                            type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                            aria-selected="true">
                             Home
                         </button>
                         <button class="nav-link" id="nav-math-tab" data-bs-toggle="tab" data-bs-target="#nav-math"
@@ -52,20 +59,24 @@
                             type="button" role="tab" aria-controls="nav-music" aria-selected="false">
                             Music
                         </button>
-                        <button class="nav-link" id="nav-experiences-tab" data-bs-toggle="tab" data-bs-target="#nav-experiences"
-                            type="button" role="tab" aria-controls="nav-experiences" aria-selected="false">
+                        <button class="nav-link" id="nav-experiences-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-experiences" type="button" role="tab" aria-controls="nav-experiences"
+                            aria-selected="false">
                             Experiences
                         </button>
-                        <button class="nav-link" id="nav-peculiarities-tab" data-bs-toggle="tab" data-bs-target="#nav-peculiarities"
-                            type="button" role="tab" aria-controls="nav-peculiarities" aria-selected="false">
+                        <button class="nav-link" id="nav-peculiarities-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-peculiarities" type="button" role="tab"
+                            aria-controls="nav-peculiarities" aria-selected="false">
                             Peculiarities
                         </button>
                     </div>
                 </nav>
-            
+
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <zero-md src="Pages/Home.md"></zero-md>
+                        <div id="home">
+                            {{contents}}
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="nav-math" role="tabpanel" aria-labelledby="nav-math-tab">
                         <zero-md src="Pages/Math.md"></zero-md>
@@ -76,10 +87,12 @@
                     <div class="tab-pane fade" id="nav-music" role="tabpanel" aria-labelledby="nav-music-tab">
                         <zero-md src="Pages/Music.md"></zero-md>
                     </div>
-                    <div class="tab-pane fade" id="nav-experiences" role="tabpanel" aria-labelledby="nav-experiences-tab">
+                    <div class="tab-pane fade" id="nav-experiences" role="tabpanel"
+                        aria-labelledby="nav-experiences-tab">
                         <zero-md src="Pages/Experiences.md"></zero-md>
                     </div>
-                    <div class="tab-pane fade" id="nav-peculiarities" role="tabpanel" aria-labelledby="nav-peculiarities-tab">
+                    <div class="tab-pane fade" id="nav-peculiarities" role="tabpanel"
+                        aria-labelledby="nav-peculiarities-tab">
                         <zero-md src="Pages/Peculiarities.md"></zero-md>
                     </div>
                 </div>
@@ -89,5 +102,7 @@
             </div>
         </div>
     </div>
+    <script src="index.js"></script>  
 </body>
+
 </html>

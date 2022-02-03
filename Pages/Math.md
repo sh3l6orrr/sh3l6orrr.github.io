@@ -25,5 +25,12 @@ $$
 $$
 Therefore, $\forall y \in S_1(y_0): J(y) \geqslant J(y_0)$. We've proved $y_0(x) = 1$ is a local minimum for $J$ as desired.
 $$
+Q.E.D
 
 *Jan 29th, 2022*
+
+Inverse processes in math
+
+math functions collection
+picard newton
+formalization of math
