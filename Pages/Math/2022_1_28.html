@@ -21,52 +21,47 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
         integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
+
+    <!-- Using Vue-->
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
             <div class="col"></div>
-            <div class="col-lg-8 col-10 col-sm-12">
-                <nav class="mt-4 mb-3">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item"> <a class="nav-link" href="https://sh3l6orrr.github.io/sh3l6orrr/index.html">          Home          </a> </li>
-                        <li class="nav-item"> <a class="nav-link"        href="https://sh3l6orrr.github.io/sh3l6orrr/math.html">           Math          </a> </li>
-                        <li class="nav-item"> <a class="nav-link"        href="https://sh3l6orrr.github.io/sh3l6orrr/coding.html">         Coding        </a> </li>
-                        <li class="nav-item"> <a class="nav-link"        href="https://sh3l6orrr.github.io/sh3l6orrr/music.html">          Music         </a> </li>
-                        <li class="nav-item"> <a class="nav-link"        href="https://sh3l6orrr.github.io/sh3l6orrr/peculiarities.html">  Peculiarities </a> </li>
-                    </ul>
-                </nav>
+            <div class="col-lg-8 col-md-10 col-12">
+                <div id="navbar"><span v-html="rawHtml"></span></div>
+                <script src="/nav.js"></script>
+                <h4 class="d-inline-block">Proving function is a functional's local minimum.</h4> <br><br>
                 <div>
-                    <h4 class="d-inline-block">Proving function is a functional's local minimum.</h4> <br><br>
-                    <div>
-                        Let \(J: C[0,1] \rightarrow \mathbb{R}\) be defined by \(J(y) = 2y^3(0) - 3y^2(0)\), where
-                        \(C[0,1]\) is a normed space with \(\lVert \cdot \rVert_M = \max\lvert y \rvert\). <br><br>
+                    Let \(J: C[0,1] \rightarrow \mathbb{R}\) be defined by \(J(y) = 2y^3(0) - 3y^2(0)\), where
+                    \(C[0,1]\) is a normed space with \(\lVert \cdot \rVert_M = \max\lvert y \rvert\). <br><br>
 
-                        Prove \(y_0(x) = 1\) is a local minimum of \(J\).  <br><br>
+                    Prove \(y_0(x) = 1\) is a local minimum of \(J\).  <br><br>
 
-                        \(Proof.\)<br>
-                        Assume \(y \in S_1(y_0)\). Then \(\lVert y - y_0 \rVert < 1\). By definition, \(\max\lvert(y -
-                        y_0)(x)\rvert < 1 \), which implies \(\lvert y(x) - 1\rvert < 1 \). Then by replacing the
-                        absolute value, 
+                    \(Proof.\)<br>
+                    Assume \(y \in S_1(y_0)\). Then \(\lVert y - y_0 \rVert < 1\). By definition, \(\max\lvert(y -
+                    y_0)(x)\rvert < 1 \), which implies \(\lvert y(x) - 1\rvert < 1 \). Then by replacing the
+                    absolute value, 
 
-                        \[0 < y < 2 \] 
+                    \[0 < y < 2 \] 
 
-                        Using this inequality, we show \(J(y) - J(y_0) \geqslant 0\): 
+                    Using this inequality, we show \(J(y) - J(y_0) \geqslant 0\): 
 
-                        \[ \begin{aligned} J(y) - J(y_0) &=2y^3(0) - 3 y^2(0) - 2y_0^3(0) + 3 y_0^2(0) \\
-                        &=2y^3(0) - 3 y^2(0) + 1 \\ & \geqslant \min (2y^3 - 3y^2) - 1 \\ &=-1 + 1 \ \
-                        \text{(Since the function assumes minimal value at $y(1)$)} \\ &=0 
-                        \end{aligned}\]
-                        Therefore, \(\forall y \in S_1(y_0): J(y) \geqslant J(y_0)\). We've proved \(y_0(x)=1\) is a
-                        local minimum for \(J\) as desired. <br>
+                    \[ \begin{aligned} J(y) - J(y_0) &=2y^3(0) - 3 y^2(0) - 2y_0^3(0) + 3 y_0^2(0) \\
+                    &=2y^3(0) - 3 y^2(0) + 1 \\ & \geqslant \min (2y^3 - 3y^2) - 1 \\ &=-1 + 1 \ \
+                    \text{(Since the function assumes minimal value at $y(1)$)} \\ &=0 
+                    \end{aligned}\]
+                    Therefore, \(\forall y \in S_1(y_0): J(y) \geqslant J(y_0)\). We've proved \(y_0(x)=1\) is a
+                    local minimum for \(J\) as desired. <br>
 
-                        \(Q.E.D.\)<br><br>
+                    \(Q.E.D.\)<br><br>
 
-                        <i>Jan 28th, 2022</i>
+                    <i>Jan 28th, 2022</i>
 
-                    </div>
                 </div>
+                
             </div>
             <div class="col"> </div>
         </div>

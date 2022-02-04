@@ -11,6 +11,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+    <!-- Using Vue-->
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 
 <body>
@@ -18,30 +21,21 @@
         <div class="row">
             <div class="col"></div>
             <div class="col-lg-8 col-md-10 col-12">
-                <nav class="mt-4 mb-3">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item"> <a class="nav-link" href="https://sh3l6orrr.github.io/sh3l6orrr/index.html">          Home          </a> </li>
-                        <li class="nav-item"> <a class="nav-link"        href="https://sh3l6orrr.github.io/sh3l6orrr/math.html">           Math          </a> </li>
-                        <li class="nav-item"> <a class="nav-link"        href="https://sh3l6orrr.github.io/sh3l6orrr/coding.html">         Coding        </a> </li>
-                        <li class="nav-item"> <a class="nav-link"        href="https://sh3l6orrr.github.io/sh3l6orrr/music.html">          Music         </a> </li>
-                        <li class="nav-item"> <a class="nav-link"        href="https://sh3l6orrr.github.io/sh3l6orrr/peculiarities.html">  Peculiarities </a> </li>
-                    </ul>
-                </nav>
-                <div>
-                    <h4 class="d-inline-block">Duality.</h4> <br><br>
-                    <div>    
-                        Not to mention the famous electricity-magnetism duality and light wave-paricle
-                        duality in Physics.<br><br>
+                <div id="navbar"><span v-html="rawHtml"></span></div>
+                <script src="/nav.js"></script>
+                <h4 class="d-inline-block">Duality.</h4> <br><br>
+                <div>    
+                    Not to mention the famous electricity-magnetism duality and light wave-paricle
+                    duality in Physics.<br><br>
 
-                        In mathematical logic, there is a beautiful duality that deeply binds Math to Computer Science: <b>Curry-Howard Isomorphism</b>, officially.<br><br>
+                    In mathematical logic, there is a beautiful duality that deeply binds Math to Computer Science: <b>Curry-Howard Isomorphism</b>, officially.<br><br>
 
-                        In social science, examples are so many even in par with its conterpart. Progressivism & Conservatism,
-                        Individualism & Collectivism, etc.<br><br>
+                    In social science, examples are so many even in par with its conterpart. Progressivism & Conservatism,
+                    Individualism & Collectivism, etc.<br><br>
 
-                        Wait, isn't natrual science and social science an example of duality itself? They gracefully
-                        corresponds to material and mind, the two most basic philosophical notions.<br><br>
-                        <i>Jan 28th, 2022</i>
-                    </div>
+                    Wait, isn't natrual science and social science an example of duality itself? They gracefully
+                    corresponds to material and mind, the two most basic philosophical notions.<br><br>
+                    <i>Jan 28th, 2022</i>
                 </div>
             </div>
             <div class="col"> </div>
