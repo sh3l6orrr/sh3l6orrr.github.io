@@ -12,15 +12,15 @@ const app = {
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <li class="nav-item"> <a class="nav-link"
-                                href="https://sh3l6orrr.github.io/sh3l6orrr/index.html"> Home </a> </li>
+                                href="https://sh3l6orrr.github.io/index.html"> Home </a> </li>
                         <li class="nav-item"> <a class="nav-link"
-                                href="https://sh3l6orrr.github.io/sh3l6orrr/math.html"> Math </a> </li>
+                                href="https://sh3l6orrr.github.io/math.html"> Math </a> </li>
                         <li class="nav-item"> <a class="nav-link"
-                                href="https://sh3l6orrr.github.io/sh3l6orrr/coding.html"> Coding </a> </li>
+                                href="https://sh3l6orrr.github.io/coding.html"> Coding </a> </li>
                         <li class="nav-item"> <a class="nav-link"
-                                href="https://sh3l6orrr.github.io/sh3l6orrr/music.html"> Music </a> </li>
+                                href="https://sh3l6orrr.github.io/music.html"> Music </a> </li>
                         <li class="nav-item"> <a class="nav-link"
-                                href="https://sh3l6orrr.github.io/sh3l6orrr/peculiarities.html"> Peculiarities  </a>  </li>
+                                href="https://sh3l6orrr.github.io/peculiarities.html"> Peculiarities  </a>  </li>
                     </div>
                 </div>
             </div>
@@ -28,15 +28,15 @@ const app = {
         <nav class="mt-4 mb-3 d-none d-sm-block">
             <ul class="nav nav-tabs">
                 <li class="nav-item"> <a class="nav-link"
-                        href="https://sh3l6orrr.github.io/sh3l6orrr/index.html"> Home </a> </li>
+                        href="https://sh3l6orrr.github.io/index.html"> Home </a> </li>
                 <li class="nav-item"> <a class="nav-link"
-                        href="https://sh3l6orrr.github.io/sh3l6orrr/math.html"> Math </a> </li>
+                        href="https://sh3l6orrr.github.io/math.html"> Math </a> </li>
                 <li class="nav-item"> <a class="nav-link"
-                        href="https://sh3l6orrr.github.io/sh3l6orrr/coding.html"> Coding </a> </li>
+                        href="https://sh3l6orrr.github.io/coding.html"> Coding </a> </li>
                 <li class="nav-item"> <a class="nav-link"
-                        href="https://sh3l6orrr.github.io/sh3l6orrr/music.html"> Music </a> </li>
+                        href="https://sh3l6orrr.github.io/music.html"> Music </a> </li>
                 <li class="nav-item"> <a class="nav-link"
-                        href="https://sh3l6orrr.github.io/sh3l6orrr/peculiarities.html"> Peculiarities </a>
+                        href="https://sh3l6orrr.github.io/peculiarities.html"> Peculiarities </a>
                 </li>
             </ul>
         </nav>
