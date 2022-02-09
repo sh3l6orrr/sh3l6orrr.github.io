@@ -13,19 +13,37 @@
                 <div id="navbar"><span v-html="rawHtml"></span></div>
                 <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
                 <h4 class="d-inline-git block">Set examples</h4> <br><br>
-                <h5>Basic</h5>
+                <h5 class="d-inline-git block">Set theory</h5> 
                 <table class="table">
                     <thead>
                       <tr>
                         <th scope="col">Name</th>
-                        <th scope="col">Property</th>
-                        <th scope="col">Theorem</th>
+                        <th scope="col">Ordered</th>
+                        <th scope="col">Is field</th>
+                        <th scope="col">Complete</th>
+                        <th scope="col">Algebraically closed</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td></td>
-                        <td></td>
+                        <td>\(\mathbb{N}\)</td>
+                        <td> ✅ </td> <td> ❌ </td> <td> ❌ </td> <td> ❌ </td> 
+                      </tr>
+                      <tr>
+                        <td>\(\mathbb{Z}\)</td>
+                        <td> ✅ </td> <td> ❌ </td> <td> ❌ </td> <td> ❌ </td> 
+                      </tr>
+                      <tr>
+                        <td>\(\mathbb{Q}\)</td>
+                        <td> ✅ </td> <td> ✅ </td> <td> ❌ </td> <td> ❌ </td> 
+                      </tr>
+                      <tr>
+                        <td>\(\mathbb{R}\)</td>
+                        <td> ✅ </td> <td> ✅ </td> <td> ✅ </td> <td> ❌ </td>
+                      </tr>
+                      <tr>
+                        <td>\(\mathbb{C}\)</td>
+                        <td> ❌ </td> <td> ✅ </td> <td> ✅ </td> <td> ✅ </td>
                       </tr>
                     </tbody>
                   </table>
