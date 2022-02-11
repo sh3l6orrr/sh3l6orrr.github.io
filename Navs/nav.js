@@ -2,7 +2,7 @@ const app = {
     data() {
       return {
         rawHtml: `
-        <nav class="navbar navbar-expand-lg navbar-light bg-light d-block d-sm-none mb-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light d-block d-sm-none mb-3 sticky-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">sh3l6or</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -25,7 +25,7 @@ const app = {
                 </div>
             </div>
         </nav>
-        <nav class="mt-4 mb-3 d-none d-sm-block">
+        <nav class="mt-4 mb-3 d-none d-sm-block sticky-top">
             <ul class="nav nav-tabs">
                 <li class="nav-item"> <a class="nav-link"
                         href="https://sh3l6orrr.github.io/index.html"> Home </a> </li>
