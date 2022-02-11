@@ -14,9 +14,9 @@
                 <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
                 <h4 class="d-inline-git block">Finding a functional's extrema with du Bois Reymond's lemma.</h4> <br><br>
                 <p>
-                    Find all possible extrema of \(J: C[0, \frac{\pi}{6}] \rightarrow \mathbb{R}\), where \(J\) is defined by 
+                    Define  \(\mathbf{D} := \{y \in C^1[0,1]: y(0) = 1,\ y(\frac{\pi}{6}) = \frac{3}{2}\}\). Find the extrema of \(J: \mathbf{D} \rightarrow \mathbb{R}\), where \(J\) is defined by 
                     
-                    \(J(y) = \int_0^\frac{\pi}{6}sec^2 y'^3\).<br><br>
+                    \(J(y) := \int_0^\frac{\pi}{6}sec^2 y'^3\).<br><br>
 
                     \(Solution.\)<br>
                     First find admissible directions for \(J\), which satisfy the following for some small \(\epsilon
@@ -55,12 +55,17 @@
                     y'(x) &= \sqrt{C} \frac{1}{\sec(x)} \\
                     y(x) &= A \sin(x) +B\\
                     \end{align*}\]
-                    Therefore, all possible extremas are in the set:
-                    \[\{y: \exists a \in \mathbb{R},\ \exists b \in \mathbb{R},\ \forall x \in [a,b]: y(x) = a \sin(x)
-                    +b\}\]
+                    Substitute in the boundary conditions, we get:
+                    \[1 = A\sin(0) + B\]
+                    \[\frac{3}{2} = A\sin(\frac{\pi}{6}) + B\]
+                    And we find:
+                    \[A=B=1\]
+                    So, the functional \(J(y)\) has extrema:
+                    \[y(x)=\sin(x) + 1\]
+                    <br>
 
-
-                    <i>Feb 4th, 2022</i>
+                    <i>Created Feb 4th, 2022</i><br>
+                    <i>Updated Feb 11th, 2022</i>
 
                 </p>
             </div>
