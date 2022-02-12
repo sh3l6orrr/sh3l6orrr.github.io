@@ -1,4 +1,4 @@
-const analysis = {
+const vectorAnalysis = {
     data() {
       return {
         rawHtml: String.raw`
@@ -9,4 +9,4 @@ const analysis = {
     }
   }
 
-Vue.createApp(analysis).mount('#analysis')
+Vue.createApp(vectorAnalysis).mount('#vector_analysis_')

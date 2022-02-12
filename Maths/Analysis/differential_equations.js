@@ -2,7 +2,6 @@ const differentialEquations = {
     data() {
       return {
         rawHtml: String.raw`
-        <h3>Differential Equations</h3>
         
         `
         
@@ -10,5 +9,5 @@ const differentialEquations = {
     }
   }
 
-Vue.createApp(differentialEquations).mount('#differential_equations')
+Vue.createApp(differentialEquations).mount('#differential_equations_')
 

@@ -2,7 +2,6 @@ const linearAlgebra = {
     data() {
       return {
         rawHtml: String.raw`
-        <h3>Linear Algebra</h3>
         <table class="table">
           <thead>
             <tr>
@@ -33,5 +32,5 @@ const linearAlgebra = {
     }
   }
 
-Vue.createApp(linearAlgebra).mount('#linear_algebra')
+Vue.createApp(linearAlgebra).mount('#linear_algebra_')
 

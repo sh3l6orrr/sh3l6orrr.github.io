@@ -35,4 +35,4 @@ const topology = {
     }
   }
 
-Vue.createApp(topology).mount('#topology')
+Vue.createApp(topology).mount('#topology_')

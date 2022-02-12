@@ -41,30 +41,57 @@
         <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
 
         <h4 class="d-inline-git block">📓 Foundation of Mathematics</h4>
-        <p>
-          <i> Mathematics is the flow of ingenuity. </i><br><br>
+        <div class="col-12 col-xxl-9">
+          <i> This is my personal notes, so it's by no means completely accurate or exhaustive.
+            Content will expand as my learning progress. External reference must note source. </i>
+        </div>
+
+        <br><br>
         <div class="row">
           <div class="col-12 col-xxl-9">
             <!-- Spied element -->
             <div data-bs-offset="0" class="scrollspy">
 
-              <div id="set_theory"><span v-html="rawHtml"></span></div>
-              <script src="https://sh3l6orrr.github.io/Maths/set_theory.js"></script>
+              <!-- Logic -->
+              <h3 id="logic">\(Logic\)</h3>
 
-              <div id="topology"><span v-html="rawHtml"></span></div>
-              <script src="https://sh3l6orrr.github.io/Maths/topology.js"></script>
+              <h5 id="set_theory">Set Theory</h5>
+              <div id="set_theory_"><span v-html="rawHtml"></span></div>
+              <script src="https://sh3l6orrr.github.io/Maths/Logic/set_theory.js"></script>
 
-              <div id="analysis"><span v-html="rawHtml"></span></div>
-              <script src="https://sh3l6orrr.github.io/Maths/analysis.js"></script>
+              <!-- Algebra -->
+              <h3 id="algebra">\(Algebra\)</h3>
 
-              <div id="linear_algebra"><span v-html="rawHtml"></span></div>
-              <script src="https://sh3l6orrr.github.io/Maths/linear_algebra.js"></script>
+              <h5 id="linear_algebra">Linear Algebra</h5>
+              <div id="linear_algebra_"><span v-html="rawHtml"></span></div>
+              <script src="https://sh3l6orrr.github.io/Maths/Algebra/linear_algebra.js"></script>
 
-              <div id="differential_equations"><span v-html="rawHtml"></span></div>
-              <script src="https://sh3l6orrr.github.io/Maths/differential_equations.js"></script>
+              <!-- Geometry -->
+              <h3 id="geometry">\(Geometry\)</h3>
 
-              <div id="calculus_of_variations"><span v-html="rawHtml"></span></div>
-              <script src="https://sh3l6orrr.github.io/Maths/calculus_of_variations.js"></script>
+              <h5 id="topology">Topology</h5>
+              <div id="topology_"><span v-html="rawHtml"></span></div>
+              <script src="https://sh3l6orrr.github.io/Maths/Geometry/topology.js"></script>
+
+              <!-- Analysis -->
+              <h3 id="Analysis">\(Analysis\)</h3>
+
+              <h5 id="real_analysis_">Real Analysis</h5>
+              <div id="real_analysis_"><span v-html="rawHtml"></span></div>
+              <script src="https://sh3l6orrr.github.io/Maths/Analysis/real_analysis.js"></script>
+
+              <h5 id="differential_equations_">Differential Equations</h5>
+              <div id="differential_equations_"><span v-html="rawHtml"></span></div>
+              <script src="https://sh3l6orrr.github.io/Maths/Analysis/differential_equations.js"></script>
+
+              <h5 id="vector_analysis">Vector Analysis</h5>
+              <div id="vector_analysis_"><span v-html="rawHtml"></span></div>
+              <script src="https://sh3l6orrr.github.io/Maths/Analysis/vector_analysis.js"></script>
+
+              <h5 id="functional_analysis">Functional Analysis</h5>
+              <div id="functional_analysis_"><span v-html="rawHtml"></span></div>
+              <script src="https://sh3l6orrr.github.io/Maths/Analysis/functional_analysis.js"></script>
+
             </div>
             <!-- Spied element -->
           </div>
@@ -73,12 +100,17 @@
             <!-- Scrollspy -->
             <div id="scrollspy" class="list-group sticky-top">
               <a class="list-group-item list-group-item-primary" href="#top">Back to Top</a>
-              <a class="list-group-item list-group-item-action" href="#set_theory">Set Theory</a>
-              <a class="list-group-item list-group-item-action" href="#topology">Topology</a>
-              <a class="list-group-item list-group-item-action" href="#analysis">Analysis</a>
+              <a class="list-group-item list-group-item-action" href="#logic">\(Logic\)</a>
+              <a class="list-group-item list-group-item-secondary" href="#set_theory">Set Theory</a>
+              <a class="list-group-item list-group-item-action" href="#algebra">\(Algebra\)</a>
               <a class="list-group-item list-group-item-action" href="#linear_algebra">Linear Algebra</a>
-              <a class="list-group-item list-group-item-action" href="#differential_equations">Differential Equations</a>
-              <a class="list-group-item list-group-item-action" href="#calculus_of_variations">Calculus of Variations</a>
+              <a class="list-group-item list-group-item-action" href="#geometry">\(Geometry\)</a>
+              <a class="list-group-item list-group-item-action" href="#topology">Topology</a>
+              <a class="list-group-item list-group-item-action" href="#analysis">\(Analysis\)</a>
+              <a class="list-group-item list-group-item-secondary" href="#real_analysis">Real Analysis</a>
+              <a class="list-group-item list-group-item-secondary" href="#differential_euqations">Differential Equations</a>
+              <a class="list-group-item list-group-item-secondary" href="#vector_analysis">Vector Analysis</a>
+              <a class="list-group-item list-group-item-secondary" href="#functional_analysis">Functional Analysis</a>
             </div>
           </div>
         </div>

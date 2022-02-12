@@ -2,7 +2,7 @@ const setTheory = {
     data() {
       return {
         rawHtml: String.raw`
-        <h3>Set Theory</h3>
+        <h3>Logic</h3>
                 <table class="table">
                   <thead>
                     <tr>
@@ -155,4 +155,4 @@ const setTheory = {
     }
   }
 
-Vue.createApp(setTheory).mount('#set_theory')
+Vue.createApp(setTheory).mount('#set_theory_')
