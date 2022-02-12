@@ -2,6 +2,7 @@ const setTheory = {
     data() {
       return {
         rawHtml: String.raw`
+        1. In general, these properties are defined on all sets:
                 <table class="table">
                   <thead>
                     <tr>
@@ -11,8 +12,8 @@ const setTheory = {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Empty</td>
-                      <td>\(S = \varnothing\)</td>
+                      <td>Nonempty</td>
+                      <td>\(S \neq \varnothing\)</td>
                     </tr>
                     <tr>
                       <td>Ordered</td>
@@ -31,7 +32,10 @@ const setTheory = {
                       <td></td>
                     </tr>
                   </tbody>
-                </table>
+                </table><br>
+
+                2. Established sets that are widely used in Mathematics, where  \(\mathbb{Z} \setminus \mathbb{N}\) is the set of negative integers,  \(\mathbb{Q} \setminus \mathbb{Z}\) is the set of fractional numbers, \(\mathbb{A} \setminus \mathbb{Q}\) is the set of algebraic irrational numbers, \(\mathbb{R} \setminus \mathbb{A}\) is the set of transcendental numbers,
+                \(\mathbb{C} \setminus \mathbb{R}\) is the set of imaginary numbers.
                 <table class="table">
                   <thead>
                     <tr>
@@ -65,12 +69,21 @@ const setTheory = {
                       <td> ❌ </td>
                     </tr>
                     <tr>
+                    <td>\(\mathbb{A}\)</td>
+                    <td> ✅ </td>
+                      <td> ✅ </td>
+                      <td> ❌ </td>
+                      <td> ❌ </td>
+                  </tr>
+                    <tr>
                       <td>\(\mathbb{R}\)</td>
                       <td> ✅ </td>
                       <td> ✅ </td>
                       <td> ✅ </td>
                       <td> ❌ </td>
                     </tr>
+                    
+
                     <tr>
                       <td>\(\mathbb{C}\)</td>
                       <td> ❌ </td>
@@ -79,7 +92,9 @@ const setTheory = {
                       <td> ✅ </td>
                     </tr>
                   </tbody>
-                </table>
+                </table><br>
+
+                3. Common properties of relations (Boolean valued functions):
                 <table class="table">
                   <thead>
                     <tr>
@@ -101,8 +116,9 @@ const setTheory = {
                       <td>\(xRy \wedge yRz \Rightarrow xRz\)</td>
                     </tr>
                   </tbody>
-                </table>
+                </table><br>
 
+                4. Common properties of functions:
                 <table class="table">
                   <thead>
                     <tr>
@@ -128,7 +144,9 @@ const setTheory = {
                       <td> \(\operatorname{Dom}(f) = \mathbb{N}\)</td>
                     </tr>
                   </tbody>
-                </table>
+                </table><br>
+
+                5. Established foundamental functions used in Mathematics, where \(S\) is a ordered set:
                 <table class="table">
                   <thead>
                     <tr>
@@ -142,7 +160,7 @@ const setTheory = {
                       <td></td>
                     </tr>
                     <tr>
-                      <td>inf</td>
+                      <td>\(\operatorname{inf}: S \rightarrow S\)</td>
                       <td></td>
                     </tr>
   

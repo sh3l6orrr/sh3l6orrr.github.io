@@ -2,7 +2,7 @@ const linearAlgebra = {
   data() {
     return {
       rawHtml: String.raw`
-        1. By defining a inner product \(<\cdot,\cdot>: V \times V \rightarrow F\) on a vector space \(V\) over \(F\), we can turn it into a inner product space. The inner product should satisfy:
+        1. By defining a inner product \(\langle \cdot,\cdot \rangle: V \times V \rightarrow F\) on a vector space \(V\) over \(F\), we can turn it into a inner product space. The inner product should satisfy:
         <table class="table">
         <thead>
           <tr>
@@ -12,17 +12,17 @@ const linearAlgebra = {
         </thead>
         <tr>
           <td>Linearity in 1st argument</td>
-          <td>\(\forall x,y,z \in V,\ forall c \in F: <cx+y,z> = c<x,z>+<y,z>\)</td>
+          <td>\(\forall x,y,z \in V,\ forall c \in F: \langle cx+y,z \rangle = c\langle x,z\rangle+\langle y,z\rangle>\)</td>
         </tr>
         <tr>
           <td>Positive definite</td>
-          <td>\(\forall x \in V: <x,x> > 0\)</td>
+          <td>\(\forall x \in V: \langle x,x\rangle > 0\)</td>
         </tr>
         <tr>
         <td>Conjugate symmetry</td>
-        <td>\(\forall x,y \in V: <x,y> = \overline{<y,x>}\)</td>
+        <td>\(\forall x,y \in V: \langle x,y \rangle = \overline{\langle y,x\rangle}\)</td>
       </tr>
-      </table>
+      </table><br>
       2. By defining a norm \(\|\cdot\|: V \rightarrow F\) on a vector space \(V\) over \(F\), we can turn it into a normed space. The norm should satisfy:
       <table class="table">
         <thead>
@@ -43,7 +43,7 @@ const linearAlgebra = {
         <td>Satisfy triangle inequality</td>
         <td></td>
       </tr>
-      </table>
+      </table><br>
       3. A mapping \(f: U \rightarrow V\) between two linear spaces over the field \(F\) may have the following properties:
         <table class="table">
           <thead>
