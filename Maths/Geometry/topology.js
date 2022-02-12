@@ -2,7 +2,6 @@ const topology = {
     data() {
       return {
         rawHtml: String.raw`
-        <h3>Topology</h3>
                 <table class="table">
                   <thead>
                     <tr>

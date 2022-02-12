@@ -2,7 +2,6 @@ const setTheory = {
     data() {
       return {
         rawHtml: String.raw`
-        <h3>Logic</h3>
                 <table class="table">
                   <thead>
                     <tr>
