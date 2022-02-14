@@ -45,7 +45,7 @@ const realAnalysis = {
           </tbody>
         </table>
 
-        If a sequence takes the form \(a_n = \sum_{k=0}^n f(k)\), and is taken the limit of \(n \rightarrow \infty\) then it's called a series, notated by: \(\lim_{n\rightarrow \infty} a_n = \lim_{n\rightarrow \infty} \sum_{k=0}^n f(k) := \sum_{k=0}^\infty f(k)\) <br><br>
+        If a sequence takes the form \(a_n = \sum_{k=0}^n f(k)\), and is taken the limit of \(n \rightarrow \infty\) then it's called a series, notated by: \(\lim_{n\rightarrow \infty} a_n = \lim_{n\rightarrow \infty} \sum_{k=0}^n f(k) := \sum_{k=0}^\infty f(k)\). A series is said to converge if its partial sum's sequence converge. <br><br>
 
 
         <div class="accordion">
