@@ -12,7 +12,7 @@
             <div class="col-lg-8 col-md-10 col-12">
                 <div id="navbar"><span v-html="rawHtml"></span></div>
                 <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
-                <h4 class="d-inline-git block">Finding a functional's extrema with the Fundamental Lemma of Calculus of Variations.</h4> <br><br>
+                <h4 class="d-inline-git block">Finding a functional's extrema with the Euler Lagrange Equation.</h4> <br><br>
                 <p>
                     
                     Define  \(\mathbf{D} := \{y \in C^1[0,1]: y(0) = 1,\ y(\frac{\pi}{6}) = \frac{3}{2}\}\). Find the possible extrema of \(J: \mathbf{D} \rightarrow \mathbb{R}\), where \(J\) is defined by 
@@ -20,40 +20,21 @@
                     \(J(y) := \int_0^\frac{\pi}{6}sec^2 y'^3\).<br><br>
 
                     \(Solution.\)
-                    First find admissible directions for \(J\), which satisfy the following for some small \(\epsilon
-                    \neq 0\):
-                    \[y + \epsilon v \in \bold{D}\]
-                    Which means:\[
-                    \begin{align*}
-                    (y + \epsilon v)(0) &= 1\\
-                    v(0)& = 0
+                    First we recognize the Lagrangian:
+                    \[L(x,y(x),y'(x)) = \sec^2(x) y'^3(x)\]
+                    Calculate the necessary identities:
+                    \[\begin{align*}
+                    L_y(x,y(x),y'(x)) & = 0\\
+                    L_{y'}(x,y(x),y'(x)) & = 3\sec^2(x)y'^2(x)\\
+                    \frac{d}{dx}L_{y'}(x,y(x),y'(x)) & = 6 \sec^2(x) y'(x) (y''(x) + \tan(x) y'(x))
                     \end{align*}\]
-                    Also:\[
+                    Apply the \(\textit{Euler-Lagrange Equation}\):\[
                     \begin{align*}
-                    (y + \epsilon v)(\frac{\pi}{6}) &= \frac{3}{2}\\
-                    v(\frac{\pi}{6}) &= 0 \\
+                    \frac{d}{dx}L_{y'}(x,y(x),y'(x)) & = L_y(x,y(x),y'(x))\\
+                    6 \sec^2(x) y'(x) (y''(x) + \tan(x) y'(x)) & =0\\
                     \end{align*}\]
-                    Note the above two identities are used as conditions for using the \(\textit{Fundamental Lemma of Calculus of\\ Variations}\)
-                    later.
-                    Next we calculate the derivative.
-                    First we recognize:
-                    \[f(x,y,z) = \sec^2(x) z^3\]
-                    So:
-                    \[f_y(x,y,z) = 0,\ f_z(x,y,z) = 3\sec^2(x)z^2\]
-                    Calculate:\[
-                    \begin{align*}
-                    \delta J(y;v) & = \int_0^\frac{\pi}{6} [f_y(x,y,y') \cdot v + f_z(x,y,y') \cdot v']\\
-                    & =3\int_0^\frac{\pi}{6} \sec^2 y'^2 v'\\
-                    \end{align*}\]
-                    At a local extremum:
-                    \[\int_0^\frac{\pi}{6} \sec^2 y'^2 v'=0\]
-                    Using the \(\textit{Fundamental Lemma of Calculus of Variations}\):
-                    \[\sec^2 y'^2\ is\ constant.\]
-                    Let that constant be \(C\). In the following, \(A,\ B\) are also constants:\[
-                    \begin{align*}
-                    \sec^2 y'^2 &= C \\
-                    y'(x) &= \sqrt{\frac{C}{\sec^2(x)}} \\
-                    y'(x) &= \sqrt{C} \frac{1}{\sec(x)} \\
+                    We have solution:
+                    \[\begin{align*}
                     y(x) &= A \sin(x) +B\\
                     \end{align*}\]
                     Substitute in the boundary conditions, we get:
@@ -66,7 +47,7 @@
                     <br>
 
                     <i>Created Feb 4th, 2022</i><br>
-                    <i>Updated Feb 11th, 2022</i>
+                    <i>Updated Mar 3rd, 2022</i>
 
                 </p>
             </div>
