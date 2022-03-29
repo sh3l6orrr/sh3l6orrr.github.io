@@ -2,99 +2,85 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> <script src="https://unpkg.com/vue@next"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous"><script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@next"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+    integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"
+    integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+    integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col-lg-8 col-md-10 col-12">
-                <div id="navbar"><span v-html="rawHtml"></span></div>
-                <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
-                <h4 class="d-inline-git block">Sequence and convergence in metric space.</h4> <br><br>
-                
-                    Sequences are functions \(a: \mathbb{N} \rightarrow \mathbf{M}\). They can have the following properties:<br><br>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Property</th>
-              <th scope="col">Definition</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Cauchy</td>
-              <td>\(\forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall m,n > N: d(a_m, a_n) < \epsilon\)</td>
-            </tr>
-            <tr>
-              <td>Convergent</td>
-              <td>\(\exist L,\ \forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall n > N: d(a_n, L) < \epsilon\)</td>
-            </tr>
-          </tbody>
-        </table><br>
-        A metric space which all Cauchy sequences are also convergent is complete.<br><br>
-         Moreover, if \(a: \mathbb{N} \rightarrow \mathbf{M}_{F}\) (Metric space of functions), it can have the additional properties:<br><br>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Property</th>
-              <th scope="col">Definition</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Pointwise convergent</td>
-              <td>\(\exist L(x),\ \forall \epsilon > 0,\ \exists N(x,\epsilon) \in \mathbb{N}, \forall n > N: d(a_n(x), L(x)) < \epsilon\)</td>
-            </tr>
-            <tr>
-              <td>Uniformly convergent</td>
-              <td>\(\exist L(x),\ \forall \epsilon > 0,\ \exists N(\epsilon) \in \mathbb{N}, \forall n > N: d(a_n(x), \\L(x)) < \epsilon\)</td>
-            </tr>
-            <tr>
-              <td>Convergent in norm</td>
-              <td>\(n\rightarrow 0 \Rightarrow \|a_n(x) - L(x)\| \rightarrow 0\)</td>
-            </tr>
-          </tbody>
-        </table><br>
+  <div class="container">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col-lg-8 col-md-10 col-12">
+        <div id="navbar"><span v-html="rawHtml"></span></div>
+        <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
+        <h4 class="d-inline-git block">Sequence and convergence in metric space.</h4> <br><br>
 
-        If a sequence takes the form \(a_n = \sum_{k=0}^n f(k)\), and is taken the limit of \(n \rightarrow \infty\) then it's called a series, notated by: \(\lim_{n\rightarrow \infty} a_n = \lim_{n\rightarrow \infty} \sum_{k=0}^n f(k) := \sum_{k=0}^\infty f(k)\). A series is said to converge if its partial sum's sequence converge. <br><br>
+        Sequences are functions \(a: \mathbb{N} \rightarrow \mathbf{M}\). A sequence is called <b>Cauchy</b> iff
+        <br><br>
+        \(\forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall m,n > N: d(a_m, a_n) < \epsilon\). <br><br>
+          A sequence is called <b>Convergent</b> iff <br><br>
+          \(\exist L,\ \forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall n > N: d(a_n, L) < \epsilon\)<br><br>
+            A metric space which all Cauchy sequences converge is <b>complete</b>.<br><br>
 
-        <div class="accordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse1" >
-                Expand to see common types of series
-              </button>
-            </h2>
-            <div id="collapse1" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Geometric series: \(\sum_{k=0}^\infty p^k\) for some \(p\).<br>
-                P-series: \(\sum_{k=0}^\infty (\frac{1}{k})^p\).<br>
-                &emsp; Harmonic series:\(\sum_{k=0}^\infty \frac{1}{k}\) for some \(p\).<br>
-                Power series: \(\sum_{k=0}^\infty c_k(x-c)^k\) for some \(c, c_k\).<br>
-                &emsp; Maclaurin series: \(\sum_{k=0}^\infty \frac{f^{(k)}}{k!}(0)x^k\) for some \(f\).<br>
-                &emsp; Taylor series: \(\sum_{k=0}^\infty \frac{f^{(k)}}{k!}(c)(x-c)^k\) for some \(f,c \neq 0\).<br>
-                Generalized Fourier series: \(\sum_{k=0}^\infty \langle f(x), \phi_k \rangle \phi_k\) for some \(f, \phi_k\), where \(\phi_k\) have linearly independent terms. <br>
-                &emsp; Complex Fourier series: \(\sum_{k=-\infty}^\infty \langle f(x), e^{ikx} \rangle e^{ikx}\) for some \(f\).<br>
-                &emsp; Fourier series: \(\frac{a_0}{2}+\sum_{k=1}^\infty \langle f(x), \cos(kx) \rangle \cos(kx) + \langle f(x), \sin(kx) \rangle \sin(kx)\) for some \(f\).<br>
-                &emsp; &emsp; Fourier cosine series: \(\frac{a_0}{2}+\sum_{k=1}^\infty \langle f(x), \cos(kx) \rangle \cos(kx)\) for some \(f\).<br>
-                &emsp; &emsp; Fourier sine series: \(\sum_{k=1}^\infty \langle f(x), \sin(kx) \rangle \sin(kx)\) for some \(f\).<br>
+            If a sequence takes the form \(a_n = \sum_{k=0}^n b_k\), where \(b_k\) is a sequence,
+            then it's called a <b>series</b>. A series is said to converge if its partial sum's sequence
+            converge. <br><br>
+
+            <div class="accordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                    Expand to see common types of series
+                  </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Geometric series: \(\sum_{k=0}^\infty p^k\) for some \(p\).<br> <br>
+                    P-series: \(\sum_{k=0}^\infty (\frac{1}{k})^p\).<br> <br>
+                    &emsp; Harmonic series:\(\sum_{k=0}^\infty \frac{1}{k}\) for some \(p\).<br> <br>
+                    Power series: \(\sum_{k=0}^\infty c_k(x-c)^k\) for some \(c, c_k\).<br> <br>
+                    &emsp; Maclaurin series: \(\sum_{k=0}^\infty \frac{f^{(k)}}{k!}(0)x^k\) for some \(f\).<br> <br>
+                    &emsp; Taylor series: \(\sum_{k=0}^\infty \frac{f^{(k)}}{k!}(c)(x-c)^k\) for some \(f,c \neq
+                    0\).<br> <br>
+                    Generalized Fourier series: \(\sum_{k=0}^\infty \langle f(x), \phi_k \rangle \phi_k\) for some \(f,
+                    \phi_k\), where \(\phi_k\) have linearly independent terms. <br> <br>
+                    &emsp; Complex Fourier series: \(\sum_{k=-\infty}^\infty \langle f(x), e^{ikx} \rangle e^{ikx}\) for
+                    some \(f\).<br> <br>
+                    &emsp; Fourier series: \(\frac{a_0}{2}+\sum_{k=1}^\infty \langle f(x), \cos(kx) \rangle \cos(kx) +
+                    \langle f(x), \sin(kx) \rangle \sin(kx)\) for some \(f\).<br> <br>
+                    &emsp; &emsp; Fourier cosine series: \(\frac{a_0}{2}+\sum_{k=1}^\infty \langle f(x), \cos(kx)
+                    \rangle \cos(kx)\) for some \(f\).<br> <br>
+                    &emsp; &emsp; Fourier sine series: \(\sum_{k=1}^\infty \langle f(x), \sin(kx) \rangle \sin(kx)\) for
+                    some \(f\).<br> <br>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <br>
-      
-        
-                    
-                    <i>Created Feb 14th, 2022.<br> Edited Feb 20th, 2022</i>
+            <br>
 
-                
-            </div>
-            <div class="col"> </div>
-        </div>
+
+
+            <i>Created Feb 14th, 2022.<br> Edited Feb 20th, 2022</i>
+
+
+      </div>
+      <div class="col"> </div>
     </div>
+  </div>
 </body>
 
 </html>
