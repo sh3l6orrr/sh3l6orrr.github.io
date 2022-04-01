@@ -27,13 +27,19 @@
       <div class="col-lg-8 col-md-10 col-12">
         <div id="navbar"><span v-html="rawHtml"></span></div>
         <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
-        <h4 class="d-inline-git block">Sequence and convergence in metric space.</h4> <br><br>
+        <h4 class="d-inline-git block">Sequences, convergence, and limits.</h4> <br><br>
 
         Sequences are functions \(a: \mathbb{N} \rightarrow \mathbf{M}\). A sequence is called <b>Cauchy</b> iff
-        <br><br>
-        \(\forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall m,n > N: d(a_m, a_n) < \epsilon\). <br><br>
-          A sequence is called <b>Convergent</b> iff <br><br>
-          \(\exist L,\ \forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall n > N: d(a_n, L) < \epsilon\)<br><br>
+
+        \[\forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall m,n > N: d(a_m, a_n) < \epsilon\]
+          A sequence is called <b>Convergent</b> iff 
+
+          \[\exist L,\ \forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall n > N: d(a_n, L) < \epsilon\]
+
+          And we say the limit of \(a_n\) exists and is \(L\):
+
+          \[\lim_{n\rightarrow\infty} a_n = L\ \ \text{or simply}\ \ a_n \rightarrow L\]
+
             A metric space which all Cauchy sequences converge is <b>complete</b>.<br><br>
 
             If a sequence takes the form \(a_n = \sum_{k=0}^n b_k\), where \(b_k\) is a sequence,
@@ -44,14 +50,14 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse1">
-                    Expand to see common types of series
+                    Expand to see common types of series.
                   </button>
                 </h2>
                 <div id="collapse1" class="accordion-collapse collapse">
                   <div class="accordion-body">
                     Geometric series: \(\sum_{k=0}^\infty p^k\) for some \(p\).<br> <br>
                     P-series: \(\sum_{k=0}^\infty (\frac{1}{k})^p\).<br> <br>
-                    &emsp; Harmonic series:\(\sum_{k=0}^\infty \frac{1}{k}\) for some \(p\).<br> <br>
+                    &emsp; Harmonic series:\(\sum_{k=0}^\infty \frac{1}{k}\).<br> <br>
                     Power series: \(\sum_{k=0}^\infty c_k(x-c)^k\) for some \(c, c_k\).<br> <br>
                     &emsp; Maclaurin series: \(\sum_{k=0}^\infty \frac{f^{(k)}}{k!}(0)x^k\) for some \(f\).<br> <br>
                     &emsp; Taylor series: \(\sum_{k=0}^\infty \frac{f^{(k)}}{k!}(c)(x-c)^k\) for some \(f,c \neq
@@ -74,7 +80,7 @@
 
 
 
-            <i>Created Feb 14th, 2022.<br> Edited Feb 20th, 2022</i>
+            <i>Created Feb 14th, 2022.<br> Edited Mar 31st, 2022</i>
 
 
       </div>

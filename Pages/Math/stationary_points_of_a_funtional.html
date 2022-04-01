@@ -12,10 +12,15 @@
             <div class="col-lg-8 col-md-10 col-12">
                 <div id="navbar"><span v-html="rawHtml"></span></div>
                 <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
-                <h4 class="d-inline-git block">Finding a functional's extrema with the Euler Lagrange Equation.</h4> <br><br>
+                <h4 class="d-inline-git block">Stationary points of a functional.</h4> <br><br>
                 <p>
-                    
-                    Define \(\mathbf{D} := \{y \in C^1[0,1]: y(0) = 1,\ y(\frac{\pi}{6}) = \frac{3}{2}\}\). Find the possible extrema of \(J: \mathbf{D} \rightarrow \mathbb{R}\), where \(J\) is defined by 
+                    The stationary points a functional \(J: \mathbf{M} \rightarrow \mathbf{R}\), where \(\mathbf{M}\) is a manifold of funtions, satisfies the necessary condition
+                    \[\forall v \in \mathbf{M}: \delta J[y;v] = 0\] 
+                    where \(\delta J[y;v]\) is the Gateaux variation, i.e. the directional derivative of \(J\).<br><br>
+                    Based on this identity we can derive the <b>Euler-Lagrange Equation</b> that gives all stationary points of a functional of the form \(J(y) := \int_a^b L(x,y,y') dx\):
+                    \[\frac{d}{dx}\frac{\partial L}{\partial y'} = \frac{\partial L}{\partial y}\]
+                    <br><hr>
+                    <b>Example 1.</b> Define \(\mathbf{D} := \{y \in C[0,1]: y(0) = 1,\ y(\frac{\pi}{6}) = \frac{3}{2}\}\). Find the stationary points of \(J: \mathbf{D} \rightarrow \mathbb{R}\), where \(J\) is defined by 
                     
                     \(J(y) := \int_0^\frac{\pi}{6}sec^2 y'^3\).<br><br>
 
@@ -24,13 +29,12 @@
                     \[L(x,y(x),y'(x)) = \sec^2(x) y'^3(x)\]
                     Calculate the necessary identities:
                     \[\begin{align*}
-                    L_y(x,y(x),y'(x)) & = 0\\
-                    L_{y'}(x,y(x),y'(x)) & = 3\sec^2(x)y'^2(x)\\
-                    \frac{d}{dx}L_{y'}(x,y(x),y'(x)) & = 6 \sec^2(x) y'(x) (y''(x) + \tan(x) y'(x))
+                    \frac{\partial L}{\partial y} & = 0\\
+                    \frac{\partial L}{\partial y'} & = 3\sec^2(x)y'^2(x)\\
+                    \frac{d}{dx}\frac{\partial L}{\partial y'} & = 6 \sec^2(x) y'(x) (y''(x) + \tan(x) y'(x))
                     \end{align*}\]
-                    Apply the \(\textit{Euler-Lagrange Equation}\):\[
+                    Apply the Euler-Lagrange Equation:\[
                     \begin{align*}
-                    \frac{d}{dx}L_{y'}(x,y(x),y'(x)) & = L_y(x,y(x),y'(x))\\
                     6 \sec^2(x) y'(x) (y''(x) + \tan(x) y'(x)) & =0\\
                     \end{align*}\]
                     We have solution:
@@ -42,12 +46,31 @@
                     \[\frac{3}{2} = A\sin(\frac{\pi}{6}) + B\]
                     And we find:
                     \[A=B=1\]
-                    So, the functional \(J(y)\) has a single possible extrema:
+                    So, the functional \(J(y)\) has a single stationary point:
                     \[y(x)=\sin(x) + 1\]
                     <br>
 
+                    <b>Example 2.</b> Let \(J: C[0,1] \rightarrow \mathbb{R}\) be defined by \(J(y) = 2y^3(0) - 3y^2(0)\), where
+                    \(C[0,1]\) is a normed space with \(\lVert \cdot \rVert_M = \max\lvert y \rvert\).  Prove \(y_0(x) = 1\) is a local minimum of \(J\).  <br><br>
+
+                    \(Proof.\)
+                    Assume \(y \in S_1(y_0)\). Then \(\lVert y - y_0 \rVert < 1\). By definition, \(\max\lvert(y -
+                    y_0)(x)\rvert < 1 \), which implies \(\lvert y(x) - 1\rvert < 1 \). Then by replacing the
+                    absolute value, 
+
+                    \[0 < y < 2 \] 
+
+                    Using this inequality, we show \(J(y) - J(y_0) \geqslant 0\): 
+
+                    \[ \begin{aligned} J(y) - J(y_0) &=2y^3(0) - 3 y^2(0) - 2y_0^3(0) + 3 y_0^2(0) \\
+                    &=2y^3(0) - 3 y^2(0) + 1 \\ & \geqslant \min (2y^3 - 3y^2) - 1 \\ &=-1 + 1\\ &=0 
+                    \end{aligned}\]
+                    Therefore, \(\forall y \in S_1(y_0): J(y) \geqslant J(y_0)\). We've proved \(y_0(x)=1\) is a
+                    local minimum for \(J\) as desired. 
+
+                    \(Q.E.D.\)<br><br>
                     <i>Created Feb 4th, 2022</i><br>
-                    <i>Updated Mar 3rd, 2022</i>
+                    <i>Updated Mar 31st, 2022</i>
 
                 </p>
             </div>
