@@ -28,11 +28,15 @@
         <div id="navbar"><span v-html="rawHtml"></span></div>
         <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
         <h4 class="d-inline-git block">Continuity of functions.</h4> <br><br>
-        We define the <b>limit of a function</b> using the limit of sequences as follows, for \(f: \mathbf{X} \rightarrow \mathbf{Y}\) iff:
-        \[\forall a_n \neq x_0 \in \mathbf{X}: a_n \rightarrow x_0 \Rightarrow f(a_n) \rightarrow y_0\]
+        We say the <b>limit of a function</b> exists for \(f: \mathbf{X} \rightarrow \mathbf{Y}\) at \(x_0\) iff:
+        \[\forall a_n \neq x_0 \in \mathbf{X}: a_n \rightarrow x_0 \Rightarrow f(a_n) \rightarrow L\]
+
+        which is equivalent to the \(\epsilon-\delta\) formulation:
+
+        \[\forall \epsilon > 0, \exists \delta > 0, \forall x \in X: d(x,x_0) < \delta \Rightarrow d(f(x), L) < \epsilon\]
 
         then the limit of \(f\) at \(x_0\) exists and 
-        \[\lim_{x\rightarrow x_0} f(x) = y_0\]
+        \[\lim_{x\rightarrow x_0} f(x) = L\]
 
             Using the above definition, we say a function \(f: \mathbf{X} \rightarrow \mathbf{Y}\) is <b>continuous at \(x_0\) </b> iff 
             \[\lim_{x\rightarrow x_0} f(x) = f(x_0)\]
@@ -41,7 +45,6 @@
 
             \[\forall \epsilon > 0, \exists \delta > 0, \forall x \in X: d(x,x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \epsilon\]
 
-            However, if 
             <hr>
             Here are various types of continuity:<br><br>
 
