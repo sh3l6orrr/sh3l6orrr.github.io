@@ -27,28 +27,24 @@
       <div class="col-lg-8 col-md-10 col-12">   
         <div id="navbar"><span v-html="rawHtml"></span></div>
         <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
-        <h4 class="d-inline-git block">Property of vector fields.</h4> <br><br>
-        The <b>Foundamental theorem of vector calculus</b> (Helmholtz decomposition) states: any vector field \(\mathbf{F}\) can be expressed as below, where \(\Phi\) is the scalar potential and \(\mathbf{A}\) is the vector potential:
-        \[\mathbf{F} = - \nabla \Phi + \nabla \times \mathbf{A}\]
-       A vector field \(\mathbf{F}\) is said to be <b>solenoidal</b> (incompressible) if:
-       \[\nabla \cdot \mathbf{F} = 0\]
-       So its helmholtz decomposition is:
-       \[\mathbf{F} = \nabla \times \mathbf{A}\]
-       A vector field \(\mathbf{F}\) is said to be <b>irrotational</b> if:
-       \[\nabla \times \mathbf{F} = 0\]
-       So its helmholtz decomposition is:
-       \[\mathbf{F} =  - \nabla \Phi \]
-       Note that an irrotational vector field is <b>conservative</b> if it's domain is simply connected.
-        If both of the above two criterions are satisfied, i.e.  \(\mathbf{F}\) is both solenoidal and irrotational, then it is said to be <b>Laplacian</b>, satisfying:
-        \[\nabla \cdot \mathbf{F} = \nabla \times \mathbf{F} = 0\]
-        And it can be helmholtz decomposed two ways:
-       \[\mathbf{F} = \nabla \times \mathbf{A} = - \nabla \Phi \]
-       We can observe that the Laplacian vector field satisfies:
-       \[\nabla \cdot \mathbf{F} = \nabla \cdot (- \nabla \Phi) = - \nabla^2 \Phi = -\Delta \Phi = 0\]
-       that is, its scalar potential satisfies the <b>Laplace equation</b> and is therefore a <b>harmonic function</b>.<br><br>
+        <h4 class="d-inline-git block">Common PDEs.</h4> <br><br>
+        <b>Possion's equation</b>
+        \[\Delta f = g\]
+        <b>Helmholtz's equation</b>
+        \[(k^2 + \Delta) f = g\]
+        <b>Heat equation</b>
+        \[(\partial_t -k \Delta) f = g\]
+        <b>Wave equation</b>
+        \[(\partial_t^2 -c^2 \Delta) f = g\]
+        <b>Klein-Gordon equation</b>
+        \[(\mu^2 +\partial_t^2 -c^2 \Delta ) f = g\]
+        <b>Telegrapher's equation</b>
+        \[(2\gamma \partial_t+\partial_t^2  -c^2 \Delta) f = g\]
 
-        <i>Created Apr 15th, 2022.</i><br>
-        <i>Edited Apr 21st, 2022.</i>
+
+
+
+        <i>Created Apr 21st, 2022.</i>
       </div>
       <div class="col"> </div>
     </div>
