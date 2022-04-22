@@ -31,8 +31,6 @@ const app = {
                 <li class="nav-item"> <a class="nav-link"
                         href="https://sh3l6orrr.github.io/math.html"> Math </a> </li>
                 <li class="nav-item"> <a class="nav-link"
-                        href="https://sh3l6orrr.github.io/coding.html"> Coding </a> </li>
-                <li class="nav-item"> <a class="nav-link"
                         href="https://sh3l6orrr.github.io/music.html"> Music </a> </li>
                 <li class="nav-item"> <a class="nav-link"
                         href="https://sh3l6orrr.github.io/peculiarities.html"> Peculiarities </a>
