@@ -30,39 +30,32 @@
         <h4 class="d-inline-git block">Spherical coordinate.</h4> <br><br>
         The spherical coordinate system is a curvillinear orthogonal coordinate system of the Euclidean space, as an alternative to the Cartesian coordiante system, cylindrical coordinate system, etc.<br><br>
         <b>Definition</b> 
-        \[\begin{align*} x &= r\sin \theta\cos\phi\\ y  &= r\sin\theta\sin\phi\\  z&= r\cos\theta\end{align*}\]
-        <b>Basis</b> (Orthonormal)
+        \[\begin{align*} 
+        x &= r\sin \theta\cos\phi \ \ \ \ \ \ &r  &= \sqrt{x^2+y^2+z^2}\\ 
+        y &= r\sin\theta\sin\phi\ \ \ \ \ &\theta &= \arctan(\frac{\sqrt{x^2+y^2}}{z})   \\  
+        z &= r\cos\theta \ \ \ \ \ &\phi &= \arctan(\frac{y}{x}) 
+        \end{align*}\]
+        <b>Orthonormal basis</b>
         \[\bm{\hat{r}} = \begin{pmatrix} \sin \theta \cos \phi \\ \sin \theta \sin \phi \\ \cos \theta \end{pmatrix}\ \
         \bm{\hat{\theta}} = \begin{pmatrix} \cos \theta \cos \phi \\ \cos \theta \sin \phi \\ - \sin \theta \end{pmatrix}\ \
         \bm{\hat{\phi}} = \begin{pmatrix} - \sin \phi \\ \cos \phi \\ 0 \end{pmatrix}\]
-        <b>Change of coordinate matrix 1:</b> from Sperical coordinates to Cartesian coordinates.
-        \[Q = \begin{pmatrix} 
-        \sin \theta \cos \phi & \cos \theta \cos \phi & - \sin \phi \\ 
-        \sin \theta \sin \phi & \cos \theta \sin \phi & \cos \phi \\ 
-        \cos \theta & - \sin \theta & 0 
-        \end{pmatrix}\ \]
-        <b>Change of coordinate matrix 2:</b> from Cartesian coordinates to Spherical coordinates.
-        \[Q^{-1} = Q^{T} = \begin{pmatrix} 
-        \sin \theta \cos \phi & \sin \theta \sin \phi & \cos \theta \\ 
-        \cos \theta \cos \phi & \cos \theta \sin \phi & - \sin \theta \\ 
-        -\sin\phi & \cos \phi & 0 
-        \end{pmatrix}\ \]
         <br><hr>
-        <b>Example 1.</b> Change the vector field \[\bm{F}(x,y,z) = \begin{pmatrix}  {x } \\  {y } \\  {z } \end{pmatrix}\] to spherical coordinates.<br><br>
-        <b>Solution.</b> Apply the change of coordinate matrix:
-        \[\begin{align*}\bm{F}(r,\theta,\phi) &=\begin{pmatrix} 
-        \sin \theta \cos \phi & \cos \theta \cos \phi & - \sin \phi \\ 
-        \sin \theta \sin \phi & \cos \theta \sin \phi & \cos \phi \\ 
-        \cos \theta & - \sin \theta & 0 
-        \end{pmatrix}\  \begin{pmatrix}  {x} \\  {y} \\  {z} \end{pmatrix} \\
-        &=  \begin{pmatrix} 
-        \sin \theta \cos \phi & \sin \theta \sin \phi & \cos \theta \\ 
-        \cos \theta \cos \phi & \cos \theta \sin \phi & - \sin \theta \\ 
-        -\sin\phi & \cos \phi & 0 \end{pmatrix} \begin{pmatrix}  {r\sin \theta\cos\phi } \\  {r\sin\theta\sin\phi } \\  {r\cos\theta } \end{pmatrix}  
-        \\& = \begin{pmatrix} 
-        r \\ 
-        0 \\ 
-        0 \end{pmatrix}  \end{align*}\]
+        <b>Example 1.</b> Convert the electric field of a point charge \(q\) in spherical coordinates representation: \[\bm{E}(r,\theta,\phi) = \frac{1}{4\pi\epsilon_0} \frac{q}{r^2}\bm{\hat{r}}\] to a function \(\bm{E}: \mathbb{R}^3 \rightarrow \mathbb{R}^3\).<br><br>
+        <b>Solution.</b> Substitute the scalers and vectors as follows:
+        \[\begin{align*}\bm{E} &= \frac{1}{4\pi\epsilon_0} \frac{q}{r^2}\bm{\hat{r}} \\&= \frac{1}{4\pi\epsilon_0} \frac{q}{x^2 + y^2 + z^2}(\sin \theta \cos \phi \bm{\hat{x}} + \sin \theta \sin \phi \bm{\hat{y}}+ \cos \theta \bm{\hat{z}})
+        \\&= 
+        \frac{1}{4\pi\epsilon_0} \frac{q}{x^2 + y^2 + z^2}(\sin (\arctan(\frac{\sqrt{x^2 + y^2}}{z})) \cos (\arctan (\frac{y}{x})) \bm{\hat{x}} + \sin (\arctan(\frac{\sqrt{x^2 + y^2}}{z})) \sin (\arctan (\frac{y}{x})) \bm{\hat{y}}+ \cos (\arctan(\frac{\sqrt{x^2 + y^2}}{z})) \bm{\hat{z}})
+        \\&= 
+        \frac{1}{4\pi\epsilon_0} \frac{q}{x^2 + y^2 + z^2}(\frac{\sqrt{x^2 + y^2}}{\sqrt{x^2 + y^2 + z^2}} \frac{x}{\sqrt{x^2 + y^2 }} \bm{\hat{x}} + \frac{\sqrt{x^2 + y^2}}{\sqrt{x^2 + y^2 + z^2}} \frac{y}{\sqrt{x^2 + y^2 }} \bm{\hat{y}}+ \frac{z}{\sqrt{x^2 + y^2 + z^2}}  \bm{\hat{z}})
+        \\&= 
+        \frac{1}{4\pi\epsilon_0} \frac{q}{x^2 + y^2 + z^2}(\frac{x}{\sqrt{x^2 + y^2 + z^2}}  \bm{\hat{x}} + \frac{y}{\sqrt{x^2 + y^2 + z^2}}  \bm{\hat{y}}+ \frac{z}{\sqrt{x^2 + y^2 + z^2}}  \bm{\hat{z}})
+
+        \end{align*}
+
+        
+        \]
+        Therefore, the desired function is defined by \(\bm{E}(x,y,z) = (\frac{q}{4\pi\epsilon_0} \frac{x}{(x^2 + y^2 + z^2)^{\frac{3}{2}}}, \frac{q}{4\pi\epsilon_0} \frac{y}{(x^2 + y^2 + z^2)^{\frac{3}{2}}}, \frac{q}{4\pi\epsilon_0} \frac{z}{(x^2 + y^2 + z^2)^{\frac{3}{2}}})\)
+
 
 
 
@@ -70,6 +63,8 @@
 
     <br><br>
         <i>Created Apr 24th, 2022.</i>
+        <br>
+        <br>
       </div>
       <div class="col"> </div>
     </div>
