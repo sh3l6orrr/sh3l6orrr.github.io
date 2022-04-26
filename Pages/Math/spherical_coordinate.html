@@ -35,14 +35,15 @@
         y &= r\sin\theta\sin\phi\ \ \ \ \ &\theta &= \arctan(\frac{\sqrt{x^2+y^2}}{z})   \\  
         z &= r\cos\theta \ \ \ \ \ &\phi &= \arctan(\frac{y}{x}) 
         \end{align*}\]
-        <b>Orthonormal basis</b>
-        \[\bm{\hat{r}} = \begin{pmatrix} \sin \theta \cos \phi \\ \sin \theta \sin \phi \\ \cos \theta \end{pmatrix}\ \
-        \bm{\hat{\theta}} = \begin{pmatrix} \cos \theta \cos \phi \\ \cos \theta \sin \phi \\ - \sin \theta \end{pmatrix}\ \
-        \bm{\hat{\phi}} = \begin{pmatrix} - \sin \phi \\ \cos \phi \\ 0 \end{pmatrix}\]
+        <b>Natural basis</b>
+        \[\bm{r} = \begin{pmatrix} \sin \theta \cos \phi \\ \sin \theta \sin \phi \\ \cos \theta \end{pmatrix}\ \
+        \bm{{\theta}} = \begin{pmatrix} r\cos \theta \cos \phi \\ r\cos \theta \sin \phi \\ - r\sin \theta \end{pmatrix}\ \
+        \bm{{\phi}} = \begin{pmatrix} - r\sin\theta\sin \phi \\ r\sin\theta\cos \phi \\ 0 \end{pmatrix}\]
         <br><hr>
         <b>Example 1.</b> Convert the electric field of a point charge \(q\) in spherical coordinates representation: \[\bm{E}(r,\theta,\phi) = \frac{1}{4\pi\epsilon_0} \frac{q}{r^2}\bm{\hat{r}}\] to a function \(\bm{E}: \mathbb{R}^3 \rightarrow \mathbb{R}^3\).<br><br>
         <b>Solution.</b> Substitute the scalers and vectors as follows:
-        \[\begin{align*}\bm{E} &= \frac{1}{4\pi\epsilon_0} \frac{q}{r^2}\bm{\hat{r}} \\&= \frac{1}{4\pi\epsilon_0} \frac{q}{x^2 + y^2 + z^2}(\sin \theta \cos \phi \bm{\hat{x}} + \sin \theta \sin \phi \bm{\hat{y}}+ \cos \theta \bm{\hat{z}})
+        \[\begin{align*}\bm{E} &= \frac{1}{4\pi\epsilon_0} \frac{q}{r^2}\bm{\hat{r}} \\
+        &= \frac{1}{4\pi\epsilon_0} \frac{q}{r^2}\bm{r} \\&= \frac{1}{4\pi\epsilon_0} \frac{q}{x^2 + y^2 + z^2}(\sin \theta \cos \phi \bm{\hat{x}} + \sin \theta \sin \phi \bm{\hat{y}}+ \cos \theta \bm{\hat{z}})
         \\&= 
         \frac{1}{4\pi\epsilon_0} \frac{q}{x^2 + y^2 + z^2}(\sin (\arctan(\frac{\sqrt{x^2 + y^2}}{z})) \cos (\arctan (\frac{y}{x})) \bm{\hat{x}} + \sin (\arctan(\frac{\sqrt{x^2 + y^2}}{z})) \sin (\arctan (\frac{y}{x})) \bm{\hat{y}}+ \cos (\arctan(\frac{\sqrt{x^2 + y^2}}{z})) \bm{\hat{z}})
         \\&= 
