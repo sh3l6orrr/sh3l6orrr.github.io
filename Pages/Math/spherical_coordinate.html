@@ -39,6 +39,10 @@
         \[\bm{r} = \begin{pmatrix} \sin \theta \cos \phi \\ \sin \theta \sin \phi \\ \cos \theta \end{pmatrix}\ \
         \bm{{\theta}} = \begin{pmatrix} r\cos \theta \cos \phi \\ r\cos \theta \sin \phi \\ - r\sin \theta \end{pmatrix}\ \
         \bm{{\phi}} = \begin{pmatrix} - r\sin\theta\sin \phi \\ r\sin\theta\cos \phi \\ 0 \end{pmatrix}\]
+        <b>Change of basis matrix</b>
+        \[\bm{J} = \begin{pmatrix} \sin \theta \cos \phi & r\cos \theta \cos \phi & - r\sin\theta\sin \phi \\ \sin \theta \sin \phi & r\cos \theta \sin \phi & r\sin\theta\cos \phi \\ \cos \theta & - r\sin \theta & 0 \end{pmatrix}\ \
+       \]
+        
         <br><hr>
         <b>Example 1.</b> Convert the electric field of a point charge \(q\) in spherical coordinates representation: \[\bm{E}(r,\theta,\phi) = \frac{1}{4\pi\epsilon_0} \frac{q}{r^2}\bm{\hat{r}}\] to a function \(\bm{E}: \mathbb{R}^3 \rightarrow \mathbb{R}^3\).<br><br>
         <b>Solution.</b> Substitute the scalers and vectors as follows:
@@ -51,19 +55,25 @@
         \\&= 
         \frac{1}{4\pi\epsilon_0} \frac{q}{x^2 + y^2 + z^2}(\frac{x}{\sqrt{x^2 + y^2 + z^2}}  \bm{\hat{x}} + \frac{y}{\sqrt{x^2 + y^2 + z^2}}  \bm{\hat{y}}+ \frac{z}{\sqrt{x^2 + y^2 + z^2}}  \bm{\hat{z}})
 
-        \end{align*}
-
-        
+        \end{align*}  
         \]
         Therefore, the desired function is defined by \(\bm{E}(x,y,z) = (\frac{q}{4\pi\epsilon_0} \frac{x}{(x^2 + y^2 + z^2)^{\frac{3}{2}}}, \frac{q}{4\pi\epsilon_0} \frac{y}{(x^2 + y^2 + z^2)^{\frac{3}{2}}}, \frac{q}{4\pi\epsilon_0} \frac{z}{(x^2 + y^2 + z^2)^{\frac{3}{2}}})\)
 
+        <b>Example 2.</b> Verify the result in Ex.1 using the change of basis matrix.<br><br>
+        <b>Solution.</b> 
 
+        \[\begin{align*}
+        \begin{pmatrix}  E_r\\ E_{\theta} \\ E_{\phi}\end{pmatrix} &= \begin{pmatrix} \sin \theta \cos \phi & r\cos \theta \cos \phi & - r\sin\theta\sin \phi \\ \sin \theta \sin \phi & r\cos \theta \sin \phi & r\sin\theta\cos \phi \\ \cos \theta & - r\sin \theta & 0 \end{pmatrix}
+        \begin{pmatrix}  \frac{1}{4\pi\epsilon_0} \frac{q}{r^2}\\ 0 \\ 0\end{pmatrix}\\ &= \begin{pmatrix}  r\\ 0\\ 0\end{pmatrix}
 
-
+        \end{align*}  
+        \]
+        The two examples give consistent results.
 
 
     <br><br>
         <i>Created Apr 24th, 2022.</i>
+        <i>Updated Apr 26th, 2022.</i>
         <br>
         <br>
       </div>
