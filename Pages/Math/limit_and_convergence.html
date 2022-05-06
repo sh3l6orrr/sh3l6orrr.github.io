@@ -28,21 +28,24 @@
         <div id="navbar"><span v-html="rawHtml"></span></div>
         <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
         <h4 class="d-inline-git block">Limit and convergence.</h4> <br><br>
-        We say the <b>limit of a sequence</b> exists for \(a_n: \mathbb{N} \rightarrow \mathbf{A}\) iff:
-        \[\exist L \in \mathbf{A},\ \forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall n \in \mathbb{N}: N < n \Rightarrow d(a_n, L) < \epsilon\]
+        We say the <b>limit of a sequence</b> exists for \(a_n: \mathbb{N} \rightarrow \mathbb{R}\) iff:
+        \[\exist L \in \mathbf{A},\ \forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall n \in \mathbb{N}: N < n \Rightarrow |a_n - L| < \epsilon\]
 
       
-        then the limit of \(a_n\) exists, or \(a_n\) is <b>convergent</b>, (or <b>point-wise convergent</b> if \(A\) is function space) and (the two notations are interchangable)
+        then the limit of \(a_n\) exists, or \(a_n\) is <b>convergent</b>, and (the two notations are interchangable)
         \[\lim_{n\rightarrow \infty} a_n = L\]
         \[n \rightarrow \infty \Rightarrow a_n \rightarrow L\]
 
-        If \(\mathbf{A}\) is function space, or equivalently \(f_n(x)\) is a sequence of functions defined on \([a,b]\), we say \(f_n(x)\) is <b>uniformly convergent</b> iff:
-        \[\exist L \in \mathbf{A}, \lim_{n\rightarrow \infty} \sup_{x \in [a,b]} |f_n(x) - L| = 0\]
+        If we have \(a_n: \mathbb{N} \rightarrow C[a,b]\), or equivalently \(f_n(x)\) is a sequence of functions, we say \(f_n(x)\) is <b>pointwise convergent</b> iff:
+        \[\forall x \in [a,b] \exist L \in \mathbf{A},\ \forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall n \in \mathbb{N}: N < n \Rightarrow |f_n(x) - L(x)| < \epsilon\]
+
+        We say \(f_n(x)\) is<b>uniformly convergent</b> iff:
+        \[\exist L \in \mathbf{A},\ \forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall x \in [a,b], \forall n \in \mathbb{N}: N < n \Rightarrow |f_n(x) - L(x)| < \epsilon\]
 
 
         We say the <b>limit of a function</b> exists for \(f: \mathbf{X} \rightarrow \mathbf{Y}\) at \(x_0\) (can be \(\infty\)) iff:
        
-        \[\exist L \in \mathbf{Y},\ \forall \epsilon > 0,\ \exists \delta > 0,\ \forall x \in X: d(x,x_0) < \delta \Rightarrow d(f(x), L) < \epsilon\]
+        \[\exist L \in \mathbf{Y},\ \forall \epsilon > 0,\ \exists \delta > 0,\ \forall x \in X: |x - x_0| < \delta \Rightarrow |f(x) - L| < \epsilon\]
 
         then the limit of \(f\) at \(x_0\) exists and (the two notations are interchangable)
         \[\lim_{x\rightarrow x_0} f(x) = L\]
@@ -50,7 +53,7 @@
         
 
 
-        <i>Created May 5th, 2022.</i>
+        <i>Created May 5th, 2022. Updated May 6th, 2022</i>
       </div>
       <div class="col"> </div>
     </div>
