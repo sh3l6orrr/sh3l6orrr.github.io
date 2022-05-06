@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@next"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+    integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"
+    integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+    integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col-lg-8 col-md-10 col-12">   
+        <div id="navbar"><span v-html="rawHtml"></span></div>
+        <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
+        <h4 class="d-inline-git block">Limit and convergence.</h4> <br><br>
+        We say the <b>limit of a sequence</b> exists for \(a_n: \mathbb{N} \rightarrow \mathbf{A}\) iff:
+        \[\exist L \in \mathbf{A},\ \forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall n \in \mathbb{N}: N < n \Rightarrow d(a_n, L) < \epsilon\]
+
+      
+        then the limit of \(a_n\) exists, or \(a_n\) is <b>convergent</b>, (or <b>point-wise convergent</b> if \(A\) is function space) and (the two notations are interchangable)
+        \[\lim_{n\rightarrow \infty} a_n = L\]
+        \[n \rightarrow \infty \Rightarrow a_n \rightarrow L\]
+
+        If \(\mathbf{A}\) is function space, or equivalently \(f_n(x)\) is a sequence of functions defined on \([a,b]\), we say \(f_n(x)\) is <b>uniformly convergent</b> iff:
+        \[\exist L \in \mathbf{A}, \lim_{n\rightarrow \infty} \sup_{x \in [a,b]} |f_n(x) - L| = 0\]
+
+
+        We say the <b>limit of a function</b> exists for \(f: \mathbf{X} \rightarrow \mathbf{Y}\) at \(x_0\) (can be \(\infty\)) iff:
+       
+        \[\exist L \in \mathbf{Y},\ \forall \epsilon > 0,\ \exists \delta > 0,\ \forall x \in X: d(x,x_0) < \delta \Rightarrow d(f(x), L) < \epsilon\]
+
+        then the limit of \(f\) at \(x_0\) exists and (the two notations are interchangable)
+        \[\lim_{x\rightarrow x_0} f(x) = L\]
+        \[x \rightarrow  x_0 \Rightarrow f(x) \rightarrow L\]
+        
+
+
+        <i>Created May 5th, 2022.</i>
+      </div>
+      <div class="col"> </div>
+    </div>
+  </div>
+</body>
+
+</html>
