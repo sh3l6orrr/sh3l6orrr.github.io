@@ -29,13 +29,17 @@
         <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
         <h4 class="d-inline-git block">Sequences and series.</h4> <br><br>
 
-        Sequences are functions \(a: \mathbb{N} \rightarrow \mathbf{M}\). Recall that a sequence defined in \(\mathbf{Y}\) is convergent iff:
+        <b>Definition</b><br>
+        <b>Sequences</b> are functions \(a: \mathbb{N} \rightarrow \mathbf{M}\).<br>
+        If a sequence takes the form \(a_n = \sum_{0}^n b_k\), where \(b_k\) is a sequence,
+        then it's called a <b>series</b>.  
+        <br><br>
+        <b>Convergence</b><br>
+        Recall that a sequence defined in \(\mathbf{Y}\) is convergent iff:
         \[\exist L \in \mathbf{Y}:\lim_{n\rightarrow \infty} a_n = L\]
-        If a sequence takes the form \(a_n = \sum_{k=0}^n b_k\), where \(b_k\) is a sequence,
-        then it's called a <b>serie</b>. A serie is said to converge if its partial sum's sequence
-        converge. <br><br>
-        
-        
+        A series is said to converge if its partial sum's sequence
+        converge:
+        \[\exist L \in \mathbf{Y}:\lim_{n\rightarrow \infty} \sum_0^n b_k = L\]
 
             <div class="accordion">
               <div class="accordion-item">
@@ -46,36 +50,39 @@
                 </h2>
                 <div id="collapse1" class="accordion-collapse collapse">
                   <div class="accordion-body">
-                    Geometric series: \(\sum_{k=0}^\infty p^k\) for some \(p\).<br> <br>
-                    P-series: \(\sum_{k=0}^\infty (\frac{1}{k})^p\).<br> <br>
-                    &emsp; Harmonic series:\(\sum_{k=0}^\infty \frac{1}{k}\).<br> <br>
-                    Power series: \(\sum_{k=0}^\infty c_k(x-c)^k\) for some \(c, c_k\).<br> <br>
-                    &emsp; Maclaurin series: \(\sum_{k=0}^\infty \frac{f^{(k)}}{k!}(0)x^k\) for some \(f\).<br> <br>
-                    &emsp; Taylor series: \(\sum_{k=0}^\infty \frac{f^{(k)}}{k!}(c)(x-c)^k\) for some \(f,c \neq
-                    0\).<br> <br>
-                    Generalized Fourier series: \(\sum_{k=0}^\infty \langle f(x), \phi_k \rangle \phi_k\) for some \(f,
-                    \phi_k\), where \(\phi_k\) have linearly independent terms. <br> <br>
-                    &emsp; Complex Fourier series: \(\sum_{k=-\infty}^\infty \langle f(x), e^{ikx} \rangle e^{ikx}\) for
-                    some \(f\).<br> <br>
-                    &emsp; Fourier series: \(\frac{a_0}{2}+\sum_{k=1}^\infty \langle f(x), \cos(kx) \rangle \cos(kx) +
-                    \langle f(x), \sin(kx) \rangle \sin(kx)\) for some \(f\).<br> <br>
-                    &emsp; &emsp; Fourier cosine series: \(\frac{a_0}{2}+\sum_{k=1}^\infty \langle f(x), \cos(kx)
-                    \rangle \cos(kx)\) for some \(f\).<br> <br>
-                    &emsp; &emsp; Fourier sine series: \(\sum_{k=1}^\infty \langle f(x), \sin(kx) \rangle \sin(kx)\) for
-                    some \(f\).<br> <br>
+                    P-series: \(\sum_{0}^\infty (\frac{1}{k})^p\).<br> <br>
+                    &emsp; Harmonic series:\(\sum_{0}^\infty \frac{1}{k}\).<br> <br>
+                    Power series: \(\sum_{0}^\infty c_k(x-c)^k\).<br> <br>
+                    &emsp; Geometric series: \(\sum_{0}^\infty x^k\).<br> <br>
+                    &emsp; Maclaurin series: \(\sum_{0}^\infty \frac{f^{(k)}}{k!}(0)x^k\).<br> <br>
+                    &emsp; Taylor series: \(\sum_{0}^\infty \frac{f^{(k)}}{k!}(c)(x-c)^k\).<br> <br>
+                    Generalized Fourier series: \(\sum_{0}^\infty \langle f(x), \phi_k \rangle \phi_k\). <br> <br>
+                    &emsp; Complex Fourier series: \(\sum_{-\infty}^\infty \langle f(x), e^{ikx} \rangle e^{ikx}\).<br> <br>
+                    &emsp; Fourier series: \(\frac{a_0}{2}+\sum_{1}^\infty \langle f(x), \cos(kx) \rangle \cos(kx) +
+                    \langle f(x), \sin(kx) \rangle \sin(kx)\).<br> <br>
+                    &emsp; &emsp; Fourier cosine series: \(\frac{a_0}{2}+\sum_{1}^\infty \langle f(x), \cos(kx)
+                    \rangle \cos(kx)\).<br> <br>
+                    &emsp; &emsp; Fourier sine series: \(\sum_{1}^\infty \langle f(x), \sin(kx) \rangle \sin(kx)\).<br> <br>
                   </div>
                 </div>
               </div>
             </div>
             <br>
             <hr>
+            <b>Cauchy sequence</b><br>
             There's a different way to derive convergence of sequences. A sequence is called <b>Cauchy</b> iff
 
             \[\forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall m,n > N: d(a_m, a_n) < \epsilon\]
               We define <b>complete</b> metric spaces to be those in which all Cauchy sequences converge. Common compete metric spaces include Euclidean space, Banach space, etc. Therefore in those spaces we can show a sequence is Cauchy and is thus convergent.
-<br><br>
-            <i>Created Feb 14th, 2022.<br> Edited May 5th, 2022</i>
-
+              <hr>
+            <b>Multiplication of sequences</b><br>
+            Product of sequences:
+            \[\lim_{n\rightarrow \infty} a_n \lim_{n\rightarrow \infty} b_n = \lim_{n\rightarrow \infty} a_n b_n\]
+            Product of series is also called the <b>Cauchy product</b>:
+            \[\sum_0^{\infty}a_k\sum_0^{\infty}b_k = \sum_0^{\infty}\sum_0^k a_l b_{k-l}\]
+<br>
+            <i>Created Feb 14th, 2022. Edited May 14th, 2022</i>
+            <br><br>
 
       </div>
       <div class="col"> </div>
