@@ -24,16 +24,29 @@
   <div class="container">
     <div class="row">
       <div class="col"></div>
-      <div class="col-lg-8 col-md-10 col-12">   
+      <div class="col-lg-8 col-md-10 col-12">
         <div id="navbar"><span v-html="rawHtml"></span></div>
         <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
         <h4 class="d-inline-git block">Compactness.</h4> <br><br>
-            We say a set is <b>compact</b> iff it's <b>complete</b> and <b>total-bounded</b>. <br><br>Since complete sets are <b>closed</b> and total-bounded sets are <b>bounded</b>, compact sets are also closed and bouneded. The converse is not true.<br><br>
+        <h1>Definition</h1>
+        A set is called <b>compact</b> iff each of its open cover contains a finite subcover. <br><br>
+        <h1>General Properties</h1>
+        Compactness of a set does not depend on its embedding space, unlike open sets or closed sets. Therefore, it
+        makes sense to talk about a <b>compact space</b>. <br><br>
 
-            In Euclidean space, however, the converse is true. by <b>Heine-Borel Theorem</b>, a closed and bounded set in Euclidean space is compact. By <b>Bolzano-Weierstrass Theorem</b>, a closed and bounded set in Euclidean space is sequentially compact, too.<br><br>
+        Compactness is equivalent to <b>completeness</b> and <b>total-boundedness</b>. Since complete sets are
+        <b>closed</b> and total-bounded sets are <b>bounded</b>, compact sets are also <b>closed</b> and <b>bouneded</b>
+        (The converse is not guaranteed).
 
+        A closed subset of a compact space is compact. <br><br>
 
-        <i>Created Mar 31st, 2022.</i>
+        <h1>Properties in \(\mathbb{R}^n\)</h1>
+
+        <b>Heine-Borel Theorem</b>: a closed and bounded set in Euclidean space is compact. <br>
+        <b>Bolzano-Weierstrass Theorem</b>: a closed and bounded set in Euclidean space
+        is sequentially compact.<br><br>
+        
+        <i>Created Mar 31st, 2022.</i><i>Edited May 16th, 2022.</i>
       </div>
       <div class="col"> </div>
     </div>

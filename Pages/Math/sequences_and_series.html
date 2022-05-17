@@ -29,63 +29,49 @@
         <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
         <h4 class="d-inline-git block">Sequences and series.</h4> <br><br>
 
-        <b>Definition</b><br>
-        <b>Sequences</b> are functions \(a: \mathbb{N} \rightarrow \mathbf{M}\).<br>
-        If a sequence takes the form \(a_n = \sum_{0}^n b_k\), where \(b_k\) is a sequence,
-        then it's called a <b>series</b>.  
+        <h1>Definition</h1>
+        <b>Sequences</b> are functions with a domain of the naturals. If a sequence takes the form \(a_n = \sum_{0}^n
+        b_k\), where \(b_k\) is a sequence,
+        then it's called a <b>series</b>. <br><br>
+        Common types of series are <b>power series</b> (incl. MacLaurin Series, Taylor Series), <b>p-series</b> (incl.
+        Reimann zeta
+        functions, harmonic series), and <b>generalized Fourier series</b> (incl. Fourier Series, Fourier sin/cosine
+        series).
         <br><br>
-        <b>Convergence</b><br>
-        Recall that a sequence defined in \(\mathbf{Y}\) is convergent iff:
+
+        <h1>Convergence</h1>
+        Recall that a sequence defined in \(\mathbf{Y}\) is <b>convergent</b> iff:
         \[\exist L \in \mathbf{Y}:\lim_{n\rightarrow \infty} a_n = L\]
         A series is said to converge if its partial sum's sequence
         converge:
         \[\exist L \in \mathbf{Y}:\lim_{n\rightarrow \infty} \sum_0^n b_k = L\]
 
-            <div class="accordion">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse1">
-                    Expand to see common types of series.
-                  </button>
-                </h2>
-                <div id="collapse1" class="accordion-collapse collapse">
-                  <div class="accordion-body">
-                    P-series: \(\sum_{0}^\infty (\frac{1}{k})^p\).<br> <br>
-                    &emsp; Harmonic series:\(\sum_{0}^\infty \frac{1}{k}\).<br> <br>
-                    Power series: \(\sum_{0}^\infty c_k(x-c)^k\).<br> <br>
-                    &emsp; Geometric series: \(\sum_{0}^\infty x^k\).<br> <br>
-                    &emsp; Maclaurin series: \(\sum_{0}^\infty \frac{f^{(k)}}{k!}(0)x^k\).<br> <br>
-                    &emsp; Taylor series: \(\sum_{0}^\infty \frac{f^{(k)}}{k!}(c)(x-c)^k\).<br> <br>
-                    Generalized Fourier series: \(\sum_{0}^\infty \langle f(x), \phi_k \rangle \phi_k\). <br> <br>
-                    &emsp; Complex Fourier series: \(\sum_{-\infty}^\infty \langle f(x), e^{ikx} \rangle e^{ikx}\).<br> <br>
-                    &emsp; Fourier series: \(\frac{a_0}{2}+\sum_{1}^\infty \langle f(x), \cos(kx) \rangle \cos(kx) +
-                    \langle f(x), \sin(kx) \rangle \sin(kx)\).<br> <br>
-                    &emsp; &emsp; Fourier cosine series: \(\frac{a_0}{2}+\sum_{1}^\infty \langle f(x), \cos(kx)
-                    \rangle \cos(kx)\).<br> <br>
-                    &emsp; &emsp; Fourier sine series: \(\sum_{1}^\infty \langle f(x), \sin(kx) \rangle \sin(kx)\).<br> <br>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br>
-            <hr>
-            <b>Cauchy sequence</b><br>
-            There's a different way to derive convergence of sequences. A sequence is called <b>Cauchy</b> iff
+        There's a different way to derive convergence of sequences. A sequence is called <b>Cauchy</b> iff
 
-            \[\forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall m,n > N: d(a_m, a_n) < \epsilon\]
-              We define <b>complete</b> metric spaces to be those in which all Cauchy sequences converge. Common compete metric spaces include Euclidean space, Banach space, etc. Therefore in those spaces we can show a sequence is Cauchy and is thus convergent.
-              <hr>
-            <b>Multiplication of sequences</b><br>
-            Product of sequences:
-            \[\lim_{n\rightarrow \infty} a_n \lim_{n\rightarrow \infty} b_n = \lim_{n\rightarrow \infty} a_n b_n\]
-            Product of series is also called the <b>Cauchy product</b>:
-            \[\sum_0^{\infty}a_k\sum_0^{\infty}b_k = \sum_0^{\infty}\sum_0^k a_l b_{k-l}\]
-<br>
-            <i>Created Feb 14th, 2022. Edited May 14th, 2022</i>
-            <br><br>
+        \[\forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall m,n > N: d(a_m, a_n) < \epsilon\] We define <b>
+          complete</b> metric spaces to be those in which all Cauchy sequences converge. Common compete metric spaces
+        include Euclidean space, Banach space, etc. Therefore in those spaces we can show a sequence is Cauchy and is
+        thus convergent. <br><br>
+
+        <h1>Arithmetic</h1>
+        Product of sequences:
+        \[\lim_{n\rightarrow \infty} a_n \lim_{n\rightarrow \infty} b_n = \lim_{n\rightarrow \infty} a_n b_n\]
+        Product of series is also called the <b>Cauchy product</b>:
+        \[\sum_0^{\infty}a_k\sum_0^{\infty}b_k = \sum_0^{\infty}\sum_0^k a_l b_{k-l}\]
+
+        <h1>Analyticity</h1>
+        Functions that can be written in the form of power series are called <b>analytic</b>:
+        \[f(x) = \sum_0^{\infty} c_k x^k\]
+        Power series are known to <b>converge uniformly</b> within their interval of convergence. By the fact that the
+        derivative of a power series is also a power series and thus also converge uniformly, analytic functions are
+        thus infinitely differentiable. <br><br>
+
+        <br><br><i>Created Feb 14th, 2022. Edited May 14th, 2022</i>
+        <br><br><br>
 
       </div>
-      <div class="col"> </div>
+      <div class="col">
+      </div>
     </div>
   </div>
 </body>
