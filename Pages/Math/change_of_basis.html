@@ -27,15 +27,17 @@
       <div class="col-lg-8 col-md-10 col-12">
         <div id="navbar"><span v-html="rawHtml"></span></div>
         <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
-        <h4 class="d-inline-git block">Change of basis.</h4> <br><br>
+        <h4 class="d-inline-git block">Transformation of tensors.</h4> <br><br>
 
         <h1>Definition</h1>
         For a <b>contravariant</b> tensor field of order 1, \(A^i\), defined in a coordinate system \((x^i)\), the
-        change of basis to a
+        <b>contravariant transformation law</b> to a
         coordinate system \((x'^i)\), where it has components \(A'^i\), is given by:
         \[A'^i = \frac{\partial x'^i}{\partial x^j} A^j\]
         A similar formula holds for a contravariant tensor field of order 2, and more:
         \[A'^{ij} = \frac{\partial x'^i}{\partial x^l} \frac{\partial x'^j}{\partial x^m}A^{lm}\]
+        <b>Covariant derivatives</b> of tensors are also tensors, and hence satisfy this tranformation law as well:
+        \[A'^i_{;k} = \frac{\partial x'^i}{\partial x^j}\frac{\partial x'^l}{\partial x^k} A^j_{;l}\]
         <hr>
         <b>Example 1.</b> The spherical coordinate system is given by:
         \[\begin{align*}
