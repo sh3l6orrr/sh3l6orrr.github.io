@@ -50,24 +50,37 @@
 
         \[\forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall m,n > N: d(a_m, a_n) < \epsilon\] We define <b>
           complete</b> metric spaces to be those in which all Cauchy sequences converge. Common compete metric spaces
-        include Euclidean space, Banach space, etc. Therefore in those spaces we can show a sequence is Cauchy and is
-        thus convergent. <br><br>
+          include Euclidean space, Banach space, etc. Therefore in those spaces we can show a sequence is Cauchy and is
+          thus convergent. <br><br>
 
-        <h1>Arithmetic</h1>
-        Product of sequences:
-        \[\lim_{n\rightarrow \infty} a_n \lim_{n\rightarrow \infty} b_n = \lim_{n\rightarrow \infty} a_n b_n\]
-        Product of series is also called the <b>Cauchy product</b>:
-        \[\sum_0^{\infty}a_k\sum_0^{\infty}b_k = \sum_0^{\infty}\sum_0^k a_l b_{k-l}\]
+          <h1>Arithmetic</h1>
+          Product of sequences:
+          \[\lim_{n\rightarrow \infty} a_n \lim_{n\rightarrow \infty} b_n = \lim_{n\rightarrow \infty} a_n b_n\]
+          Product of series is also called the <b>Cauchy product</b>:
+          \[\sum_0^{\infty}a_k\sum_0^{\infty}b_k = \sum_0^{\infty}\sum_0^k a_l b_{k-l}\]
 
-        <h1>Analyticity</h1>
-        Functions that can be written in the form of power series are called <b>analytic</b>:
-        \[f(x) = \sum_0^{\infty} c_k x^k\]
-        Power series are known to <b>converge uniformly</b> within their interval of convergence. By the fact that the
-        derivative of a power series is also a power series and thus also converge uniformly, analytic functions are
-        thus infinitely differentiable, also called <b>smooth</b>. <br><br>
+          <h1>Series expansion</h1>
 
-        <br><br><i>Created Feb 14th, 2022. Edited May 14th, 2022</i>
-        <br><br><br>
+          If a function \(f(x)\) is <b>smooth</b> at \(x = a\), then its <b>Taylor expansion</b> at \(x = a\) is given
+          by:
+          \[f(x) = \sum_0^{\infty} c_k (x-a)^k\]
+          where \(c_k = \frac{f^{(n)}(a)}{n!}\). If the radius of convergence is \(r\), then \(f(x)\) is said to be
+          <b>analytic</b> on \((a-r,a+r)\).<br><br>
+
+          If a function \(f(x)\) is continuous and piecewise differentiable on \([a,b]\), then its <b>Fourier
+            expansion</b> is given by:
+          \[f(x) = \sum_{-\infty}^{\infty} c_k e^{\frac{2\pi kix}{b-a}}\]
+          where \(c_k = \frac{1}{b-a}\int_a^b f(x)e^{\frac{-2\pi kix}{b-a}}\).<br><br>
+
+            In both cases, the convergence is uniform.
+          </b>
+          <br><br>
+
+          <h1>Series approximation</h1>
+          Both the set of polynomials in the form \(\sum_0^{N} c_k x^k\) and the set of trignometric polynomials in the form \(\sum_{-N}^{N} c_k e^{kix}\) are <b>algebra</b>. By the <b>Stone-Weierstrass Theorem</b>, for \(f(x)\) continuous on an closed interval, exists a sequence \({P_n(x)}\) of both types of polynomials, that \(P_n(x) \rightarrow f(x)\) uniformly.
+
+          <br><br><i>Created Feb 14th, 2022. Edited May 28th, 2022</i>
+          <br><br><br>
 
       </div>
       <div class="col">

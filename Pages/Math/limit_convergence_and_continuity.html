@@ -28,6 +28,7 @@
         <div id="navbar"><span v-html="rawHtml"></span></div>
         <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
         <h4 class="d-inline-git block">Limit, convergence, and continuity.</h4> <br><br>
+       <h1>Limit</h1>
         We say the <b>limit of a sequence</b> exists for \(a_n\) and the limit is \(L\) iff:
         \[\exist L ,\ \forall \epsilon > 0,\ \exists N \in \mathbb{N}, \forall n \in \mathbb{N}: N < n \Rightarrow |a_n - L| < \epsilon\]
 
@@ -42,14 +43,15 @@
         \[\lim_{x\rightarrow x_0} f(x) = L\]
 
         
-<hr>
+        <h1>Convergence</h1>
         We call a sequence <b>convergent</b> iff:
         \[\exists L: \lim_{n\rightarrow \infty} a_n = L\]
         We call a sequence of functions defined on \([a,b]\) <b>pointwise convergent</b> iff:
         \[\exists f(x): \forall x \in [a,b], \lim_{n\rightarrow \infty} f_n(x) = f(x)\]
         We call a sequence of functions defined on \([a,b]\) <b>uniformly convergent</b> iff:
         \[\exists f(x): \lim_{n\rightarrow \infty} \sup_{x \in [a,b]}|f_n(x) - f(x)| = 0\]
-        <hr>
+        
+        <h1>Continuity</h1>
         We call a function defined on \([a,b]\) <b>continuous at a point</b> at \(x_0 \in [a,b]\) iff:
         \[\lim_{x\rightarrow x_0} f(x) = f(x_0)\]
         We call a function defined on \([a,b]\) <b>continuous</b> iff:

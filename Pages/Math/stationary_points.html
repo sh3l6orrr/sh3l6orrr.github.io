@@ -14,12 +14,16 @@
                 <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
                 <h4 class="d-inline-git block">Stationary points.</h4> <br><br>
                 <p>
+                    <h1>Definition</h1>
                     The stationary points a functional \(J: \mathbf{M} \rightarrow \mathbf{R}\), where \(\mathbf{M}\) is a manifold of funtions, satisfies the necessary condition
                     \[\forall v \in \mathbf{M}: \delta J[y;v] = 0\] 
                     where \(\delta J[y;v]\) is the Gateaux variation, i.e. the directional derivative of \(J\).<br><br>
+
+                    <h1>Necessary condition</h1>
                     Based on this identity we can derive the <b>Euler-Lagrange Equation</b> that gives all stationary points of a functional of the form \(J(y) := \int_a^b L(x,y,y') dx\):
                     \[\frac{d}{dx}\frac{\partial L}{\partial y'} = \frac{\partial L}{\partial y}\]
-                    <br><hr>
+                    
+                    <h1>Examples</h1>
                     <b>Example 1.</b> Define \(\mathbf{D} := \{y \in C[0,1]: y(0) = 1,\ y(\frac{\pi}{6}) = \frac{3}{2}\}\). Find the stationary points of \(J: \mathbf{D} \rightarrow \mathbb{R}\), where \(J\) is defined by 
                     
                     \(J(y) := \int_0^\frac{\pi}{6}sec^2 y'^3\).<br><br>

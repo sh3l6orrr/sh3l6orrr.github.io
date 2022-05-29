@@ -27,24 +27,47 @@
       <div class="col-lg-8 col-md-10 col-12">   
         <div id="navbar"><span v-html="rawHtml"></span></div>
         <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
-        <h4 class="d-inline-git block">Common PDEs.</h4> <br><br>
-        <b>Possion's equation</b>
-        \[\Delta f = g\]
-        <b>Helmholtz's equation</b>
-        \[(k^2 + \Delta) f = g\]
-        <b>Heat equation</b>
-        \[(\partial_t -k \Delta) f = g\]
-        <b>Wave equation</b>
-        \[(\partial_t^2 -c^2 \Delta) f = g\]
-        <b>Klein-Gordon equation</b>
-        \[(\mu^2 +\partial_t^2 -c^2 \Delta ) f = g\]
-        <b>Telegrapher's equation</b>
-        \[(2\gamma \partial_t+\partial_t^2  -c^2 \Delta) f = g\]
+        <h4 class="d-inline-git block">Linear PDEs.</h4> <br><br>
+        The most common PDEs are the <b>linear</b> PDEs in the form 
+        \[L[f] = g\] 
+        with unknown \(f\). If \(g = 0\), then it's <b>homogeneous</b>, otherwise it's <b>inhomogeneous</b>.<br><br>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Linear operator</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Possion's equation</th>
+              <td>\(\Delta\)</td>
+            </tr>
+            <tr>
+            <th scope="row">Helmholtz's equation</th>
+            <td>\(k^2 + \Delta\)</td>
+          </tr>
+        <tr>
+            <th scope="row">Heat equation</th>
+            <td>\(\partial_t -k \Delta\)</td>
+          </tr>
+        <tr>
+            <th scope="row">Wave equation</th>
+            <td>\(\partial_t^2 -c^2 \Delta\)</td>
+          </tr><tr>
+            <th scope="row">Klein-Gordon equation</th>
+            <td>\(\mu^2 +\partial_t^2 -c^2 \Delta \)</td>
+          </tr><tr>
+            <th scope="row">Telegrapher's equation</th>
+            <td>\(2\gamma \partial_t+\partial_t^2  -c^2 \Delta\)</td>
+          </tr>
+          </tbody>
+        </table>
 
 
 
 
-        <i>Created Apr 21st, 2022.</i>
+        <i>Created Apr 21st, 2022. Last modified May 28th, 2022.</i>
       </div>
       <div class="col"> </div>
     </div>
