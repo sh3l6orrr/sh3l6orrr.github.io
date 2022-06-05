@@ -24,52 +24,19 @@
   <div class="container">
     <div class="row">
       <div class="col"></div>
-      <div class="col-lg-8 col-md-10 col-12">   
+      <div class="col-lg-8 col-md-10 col-12">
         <div id="navbar"><span v-html="rawHtml"></span></div>
         <script src="https://sh3l6orrr.github.io/Navs/nav.js"></script>
-        <h4 class="d-inline-git block">Linear PDEs.</h4> <br><br>
-        <h1>General form</h1>
-        The most common PDEs are the <b>linear</b> PDEs in the form 
-        \[L[f] = g\] 
-        with unknown \(f\). If \(g = 0\), then it's <b>homogeneous</b>, otherwise it's <b>inhomogeneous</b>.<br><br>
-        <h1>Common forms</h1>
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Linear operator</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Possion's equation</th>
-              <td>\(\Delta\)</td>
-            </tr>
-            <tr>
-            <th scope="row">Helmholtz's equation</th>
-            <td>\(k^2 + \Delta\)</td>
-          </tr>
-        <tr>
-            <th scope="row">Heat equation</th>
-            <td>\(\partial_t -k \Delta\)</td>
-          </tr>
-        <tr>
-            <th scope="row">Wave equation</th>
-            <td>\(\partial_t^2 -c^2 \Delta\)</td>
-          </tr><tr>
-            <th scope="row">Klein-Gordon equation</th>
-            <td>\(\mu^2 +\partial_t^2 -c^2 \Delta \)</td>
-          </tr><tr>
-            <th scope="row">Telegrapher's equation</th>
-            <td>\(2\gamma \partial_t+\partial_t^2  -c^2 \Delta\)</td>
-          </tr>
-          </tbody>
-        </table>
+        <h4 class="d-inline-git block">Integration and Differentiation</h4> <br><br>
+        <h1>Differentiation</h1>
+        For a <b>single variable function</b> \(f: [a,b] \rightarrow \mathbb{R}\), its <b>derivative</b> is defined as:
+        \[\frac{d}{dx}f(x) = \lim_{t \rightarrow x} \frac{f(t) - f(x)}{t-x} \]
 
-
-
-
-        <i>Created Apr 21st, 2022. Last modified May 28th, 2022.</i>
+        <h1>Integration</h1>
+        For a <b>single variable function</b> \(f: [a,b] \rightarrow \mathbb{R}\), its <b>Reimann integral</b> from \(t \in [a,b]\) is defined as:
+        \[\int_t^x f(x) dx = \lim_{\| P \| \rightarrow 0} \sum_1^n f(m_k) (x_{k+1} - x_k) \]
+        where \(P\) is a <b>tagged partition</b> of \([t,x]\) with partition points \(x_1 ... x_{n+1}\) and tags \(m_1 ... m_n\).<br><br>
+        <i>Created Mar 31st, 2022.</i> <i>Edited May 16th, 2022.</i>
       </div>
       <div class="col"> </div>
     </div>
